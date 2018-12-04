@@ -4,16 +4,17 @@ import time
 #import pandas as pd
 
 
-apikey = '82KAKRXYKTSMEUPU'
-f = open('company_keys_nn.txt', 'r')
+# Collect company symbols from txt file
+f = open('company_keys.txt', 'r')
 symbol = []
 for line in f:
     symbol.append(line[:-1])
 f.close()
-#symbol.extend(['miii', 'll'])
+#symbol.extend([company1, company2])
 
 t = 750
 data = np.zeros((len(symbol), t))
+apikey = '82KAKRXYKTSMEUPU'
 for i, company in enumerate(symbol):
     ts = TimeSeries(apikey, output_format='pandas')
     print(company)

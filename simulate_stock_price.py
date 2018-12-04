@@ -12,7 +12,7 @@ def get_data_alpha_vantage(directory, filename):
 def parameter_estimation(data):
     # Input: 2D numpy array with first column as time and second column as stock price
     # Output: Annualised expected return and volatility
-    stock_price = np.float64(data[:, 1])
+    stock_price = np.float64(data)
     log_returns = np.log(stock_price[1:]/stock_price[0:-1])
     m = np.mean(log_returns)
     volatility = np.std(log_returns)  # np.sqrt(1/(len(S)-2)*np.sum(np.power((S-m), 2)))
@@ -52,8 +52,12 @@ def simulate_BS(stock_price, exercise_price, time_to_maturity, risk_free_rate, c
 
 
 def expected_option_price(stock_price, exercise_price, risk_free_rate, current_time):
-    S, K, r, t = stock_price[:, -1], exercise_price, risk_free_rate, current_time
-    T = len(S)
-    C = np.maximum(S-K, np.zeros((len(S))))
-    return np.exp(-r*(T-t))*np.mean(C)
+    stock_price_at_expiry, time_to_expiry = stock_price[:, -1], len(stock_price)
+    C = np.maximum(stock_price_at_expiry-exercise_price, np.zeros((len(stock_price_at_expiry))))
+    return np.exp(-risk_free_rate*(time_to_expiry-current_time))*np.mean(C)
+
+
+def true_option_price(stock_price, exercise_price, risk_free_rate):
+    time_to_expiry, stock_price_at_expiry = len(stock_price), stock_price[-1]
+    return np.exp(-risk_free_rate*time_to_expiry)*np.maximum(stock_price_at_expiry-exercise_price,  0)
 

@@ -1,0 +1,20 @@
+Command in cmd for alpha vantage data
+alpha-vantage-cli --type=daily --symbol=MSFT --api-key=82KAKRXYKTSMEUPU --out=MSFT_daily.csv --output-data-size="full"
+
+
+Trying to make batch script:
+Array[$counter]=$line;
+  let counter=counter+1;
+  echo $counter;
+done < test.txt
+
+for i in {0..2}
+do
+	echo -e alpha-vantage-cli --type=daily --symbol=${Array[$i]} 
+	echo --api-key=82KAKRXYKTSMEUPU --out=
+	echo $i _daily.csv --output-data-size="full"
+	echo $i
+done
+
+If error message on \r:
+dos2unix bashcript.bash 
