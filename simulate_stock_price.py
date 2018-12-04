@@ -1,34 +1,59 @@
 import numpy as np
-# import montecarlo_normal as mc
+from scipy.stats import norm
+import pandas as pd
 
 
-def calculate_historical_values(data):
-    S = data
-    logreturn = np.log(S[:-2]/S[1:])
-    historical_volatility = np.std(logreturn)
-    historical_expected_return = np.mean(logreturn)
-    return historical_volatility, historical_expected_return
+def get_data_alpha_vantage(directory, filename):
+    df = pd.read_csv(directory + '/' + filename, delimiter=',', header=0)
+    df = df[['Timestamp', 'Close']]
+    return df.get_values()
 
 
-def simulate_stock_price(num_of_sim, length_of_sim, exp_return, volatility, initial_price):
-    S0, mu, sigma = initial_price, exp_return, volatility
-    S = np.zeros((num_of_sim, length_of_sim+1))
-    S[:, 0] = S0
-    for i in range(num_of_sim):
-        for j in range(length_of_sim):
-            S[i, j+1] = S[i, j]*np.exp((mu-0.5*sigma**2) + sigma*np.random.normal(0, 1, 1))
-    return S
+def parameter_estimation(data):
+    # Input: 2D numpy array with first column as time and second column as stock price
+    # Output: Annualised expected return and volatility
+    stock_price = np.float64(data[:, 1])
+    log_returns = np.log(stock_price[1:]/stock_price[0:-1])
+    m = np.mean(log_returns)
+    volatility = np.std(log_returns)  # np.sqrt(1/(len(S)-2)*np.sum(np.power((S-m), 2)))
+    mu = m - 0.5*volatility**2
+    return mu*250, volatility*np.sqrt(250)
 
 
-def expected_option_price(stock_prices, strike_price, risk_free_rate):
-    S, K, r = stock_prices, strike_price, risk_free_rate
+def simulate_random_walk(exp_return, volatility, current_price, time_to_maturity, no_time_steps, no_simulations):
+    # Input: Annualised expected return, annualised volatility, current stock price, time to maturity in days,
+    # number of time steps, number of simulations
+    # Output: Simulated stock price
+    delta_t = time_to_maturity/no_time_steps
+    stock_price = np.zeros((no_simulations, no_time_steps + 1))
+    stock_price[:, 0] = current_price
+    for i in range(no_simulations):
+        for j in range(no_time_steps):
+            Z = np.random.normal(loc=0, scale=1, size=1)
+            stock_price[i, j+1] = stock_price[i, j] * (1 + exp_return*delta_t + volatility * np.sqrt(delta_t) * Z)
+    return stock_price
+
+
+def simulate_stock_price_historical(data, time_to_maturity, no_of_time_steps, no_of_simulations):
+    exp_return, volatility = parameter_estimation(data)
+    time_to_maturity_annualised = time_to_maturity / 250  # 30 days maturity divided by 250  trading days
+    N, M = no_of_time_steps, no_of_simulations
+    S0 = data[-1*time_to_maturity, 1]  # current price
+    return simulate_random_walk(exp_return, volatility, N, time_to_maturity_annualised, S0, M)
+
+
+def simulate_BS(stock_price, exercise_price, time_to_maturity, risk_free_rate, current_time):
+    S, K, T, r = stock_price[-1*time_to_maturity, 1], exercise_price, time_to_maturity / 250, risk_free_rate,
+    t = current_time
+    _, volatility = parameter_estimation(stock_price)
+    d1 = (np.log(S / K) + (r + 0.5 * np.power(volatility, 2) * (T - t))) / (volatility * np.sqrt(T - t))
+    d2 = (np.log(S / K) + (r - 0.5 * np.power(volatility, 2)) * (T - t)) / (volatility * np.sqrt(T - t))
+    return S * norm.cdf(d1) - K * np.exp(-1 * r * (T - t)) * norm.cdf(d2)
+
+
+def expected_option_price(stock_price, exercise_price, risk_free_rate, current_time):
+    S, K, r, t = stock_price[:, -1], exercise_price, risk_free_rate, current_time
     T = len(S)
-    mean_S = np.mean(S, axis=1)
-    C = np.exp(-r*T)*np.maximum(mean_S-K, np.zeros((len(S))))
-    C_expected = np.mean(C)
-    return C_expected
-
-
-
-
+    C = np.maximum(S-K, np.zeros((len(S))))
+    return np.exp(-r*(T-t))*np.mean(C)
 
