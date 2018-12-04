@@ -21,7 +21,7 @@ X = np.loadtxt('input_new.txt')
 Y = np.array(np.loadtxt('output_new.txt'))
 data = np.column_stack((X, Y))
 np.random.shuffle(data)
-X = data[:, :-1]
+X = [data[:, 0]. data[:, 1], data[:, 2], data[:, 3], data[:, 4]]
 Y = data[:, -1]
 
 trainX = X[:int(np.round(0.8*len(X))), :]
@@ -37,7 +37,7 @@ layer1 = 100
 layer2 = 100
 layer3 = 100
 #layer4 = 100
-activation_function =  'sigmoid'  # 'relu
+activation_function = 'relu
 output_function = 'sigmoid'
 
 model = Sequential()
