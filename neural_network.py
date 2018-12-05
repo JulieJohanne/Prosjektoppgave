@@ -21,13 +21,16 @@ X = np.loadtxt('input_new.txt')
 Y = np.array(np.loadtxt('output_new.txt'))
 data = np.column_stack((X, Y))
 np.random.shuffle(data)
-X = [data[:, 0]. data[:, 1], data[:, 2], data[:, 3], data[:, 4]]
+X = data[:, :-1]  # [data[:, 0], data[:, 1], data[:, 2], data[:, 3], data[:, 4]]
 Y = data[:, -1]
 
-trainX = X[:int(np.round(0.8*len(X))), :]
+trainXX = X[:int(np.round(0.8*len(X))), :]
 trainY = Y[:int(np.round(0.8*len(X)))]
-testX = X[int(np.round(0.8*len(X)))+1:, :]
+testXX = X[int(np.round(0.8*len(X)))+1:, :]
 testY = Y[int(np.round(0.8*len(X)))+1:]
+
+trainX = [trainXX[:, 0], trainXX[:, 1], trainXX[:, 2], trainXX[:, 3], trainXX[:, 4]]
+testX = [testXX[:, 0], testXX[:, 1], testXX[:, 2], testXX[:, 3], testXX[:, 4]]
 
 
 # Create model
@@ -37,7 +40,7 @@ layer1 = 100
 layer2 = 100
 layer3 = 100
 #layer4 = 100
-activation_function = 'relu
+activation_function = 'relu'
 output_function = 'sigmoid'
 
 model = Sequential()
@@ -57,10 +60,11 @@ model.compile(loss=loss_function, optimizer=optimizing_algorithm, metrics=['accu
 # Fit the model
 no_epochs = 50
 batch_size = 32  # None  # 10
-validation_split = None  # 0.8  # 0.67
+validation_split = 0.8  # 0.67 None
+#validation_data = (testX,testY)
 
 history = model.fit(trainX, trainY, epochs=no_epochs, batch_size=batch_size,  verbose=2, callbacks=None,
-        validation_split=validation_split, validation_data=(testX,testY), shuffle=True, class_weight=None,
+        validation_split=validation_split, validation_data=None, shuffle=True, class_weight=None,
         sample_weight=None, initial_epoch=0, steps_per_epoch=None, validation_steps=None)
 model.evaluate(trainX, trainY, batch_size=batch_size, verbose=1, sample_weight=None, steps=None)
 trainPredict = model.predict(trainX)
