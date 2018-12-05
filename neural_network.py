@@ -28,6 +28,7 @@ Y = np.array(data[:, -1]/data[:, 2])
 # standardised_X = preprocessing.scale(X)
 # normalised_X = preprocessing.normalize(X)
 
+henlo
 """
 trainX = X[:int(np.round(0.8*len(X))), :]
 trainY = Y[:int(np.round(0.8*len(X)))]
