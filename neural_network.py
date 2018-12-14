@@ -9,6 +9,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
 from keras import optimizers
+from keras import regularizers
 # from keras.layers import LSTM
 # from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
@@ -16,71 +17,99 @@ from sklearn import preprocessing
 
 
 # Set seed
-seed = 7
-np.random.seed(seed)
+#seed = 7
+#np.random.seed(seed)
 
 # Prepare data
-X = np.loadtxt('input_new.txt')
-Y = np.array(np.loadtxt('output_new.txt'))
-data = np.column_stack((X, Y))
+data = np.column_stack((np.loadtxt('input_new.txt'), np.loadtxt('output_new.txt')))
+data = np.column_stack((np.arange(len(data)), data))
 np.random.shuffle(data)
-X = np.array([data[:, 0], data[:, 1]/data[:, 2], data[:, 3], data[:, 4]/252]).T  #data[:, :-1]
-Y = np.array(data[:, -1]/data[:, 2])
-#standardised_X = preprocessing.scale(X)
-# normalised_X = preprocessing.normalize(X)
+print(data)
+X = np.array([data[:, 1], data[:, 2]/data[:, 3], data[:, 4], data[:, 5]/252]).T 
+Y = np.array(data[:, -1]/data[:, 3])
 
-"""
-trainX = X[:int(np.round(0.8*len(X))), :]
-trainY = Y[:int(np.round(0.8*len(X)))]
-testXX = X[int(np.round(0.8*len(X)))+1:, :]
-testY = Y[int(np.round(0.8*len(X)))+1:]
-"""
+# Test for nan's
+for i in range(len(Y)):
+    if np.isnan(Y[i]):
+        print('Y has nan, index: ', i)
+index_delete = []
+for j in range(len(X)):
+    for k in range(3):
+        if np.isnan(X[j, k]):
+            index_delete.append(j)
+            #print('X has nan, index: ', j, k)
+X = np.delete(X, index_delete, 0)
+Y = np.delete(Y, index_delete)
+data = np.delete(data, index_delete, 0)
+#X = preprocessing.scale(X)
+#X = preprocessing.normalize(X) ValueError
 
+index_slice = int(np.round(0.8*len(X)))
+trainX = X[:index_slice, :]
+trainY = Y[:index_slice]
+testX = X[index_slice:, :]
+testY = Y[index_slice:]
+print(np.c_[data[index_slice:, 0], testX])
+np.savetxt('testX.txt', np.c_[data[index_slice:, 0], testX])
+np.savetxt('testY.txt', testY)
+"""
 # Create model
-input_size = np.shape(X)[1]
-output_size = 1 #np.shape(Y)[1]c
+#input_size = np.shape(X)[1]
+#output_size = 1 #np.shape(Y)[1]c
 layers = [20, 20, 20, 20, 20]
-activation_function = 'tanh' #'relu'
-output_function = 'sigmoid' # tanh
-
+#activation_function = 'tanh' #'relu'
+#output_function = 'sigmoid' # tanh
 model = Sequential()
-model.add(Dense(layers[0], input_dim=input_size, activation=activation_function))
+model.add(Dense(layers[0], input_dim=np.shape(X)[1]))
 model.add(Dropout(0.4))
-model.add(Dense(layers[1], activation=activation_function)) 
-model.add(Dropout(0.5))
-model.add(Dense(layers[2], activation=activation_function))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-model.add(Dropout(0.5))
-model.add(Dense(layers[3], activation=activation_function))
-model.add(Dropout(0.5))
-model.add(Dense(layers[4], activation=activation_function))
-model.add(Dropout(0.5))
-model.add(Dense(output_size, activation=output_function))
+model.add(Dense(layers[1], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01))) 
+model.add(Dropout(0.4))
+model.add(Dense(layers[2], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))  
+model.add(Dropout(0.4))
+model.add(Dense(layers[3], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dropout(0.4))
+model.add(Dense(layers[4], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dropout(0.4))
+model.add(Dense(1, activation='sigmoid'))
 
 model.summary()
 
 # Compile model
 #sgd = optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
 #rmsPROP = 
-loss_function = 'mean_absolute_percentage_error'  #'mean_squared_error'  # 'binary_crossentropy' 'binary_crossentropy' 
-optimizing_algorithm = 'adam'  # 'nadam'  # 'sdg'
-model.compile(loss=loss_function, optimizer=optimizing_algorithm, metrics=['mse', 'mae', 'mape'])
+#loss_function = 'mean_squared_error'  # 'mean_absolute_percentage_error'  'binary_crossentropy' 
+#optimizing_algorithm = 'adam'  # 'nadam'  # 'sdg'
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mse', 'mae', 'mape'])
 
 # Fit the model
 no_epochs = 100
-batch_size = 128  # 32  # None  # 10
-validation_split =  0.2 # None
-validation_data =  None #(testX,testY) # None
-history = model.fit(X, Y, epochs=no_epochs, batch_size=batch_size,  verbose=2, callbacks=None,
-        validation_split=validation_split, validation_data=validation_data, shuffle=True, class_weight=None,
-        sample_weight=None, initial_epoch=0, steps_per_epoch=None, validation_steps=None)
-"""
-model.evaluate(trainX, trainY, batch_size=batch_size, verbose=1, sample_weight=None, steps=None)
+#batch_size = 128  # 32  # None  # 10
+#validation_split =  0.2 # None
+#validation_data =  None  #(testX,testY) # None
+history = model.fit(trainX, trainY, epochs=no_epochs, batch_size=128,  verbose=2,
+        validation_split=0.2, validation_data=None, shuffle=True)
+
+model.evaluate(trainX, trainY, batch_size=128, verbose=1)
+
+#print(history.history.keys()) = ['loss', 'val_mean_absolute_percentage_error', 'mean_absolute_percentage_error', 'val_mean_squared_error', 'val_mean_absolute_error', 'mean_squared_error', 'val_loss', 'mean_absolute_error']
+
+# Make predictions
 trainPredict = model.predict(trainX)
 testPredict = model.predict(testX)
-trainScore = np.sqrt(mean_squared_error(trainY[0], trainPredict[:, 0]))
-testScore = np.sqrt(mean_squared_error(testY[0], testPredict[:, 0]))
-"""
-print(history.history.keys())
+plt.plot(trainPredict, '*')
+plt.title('train predict')
+plt.show()
+plt.plot(testPredict, '*')
+plt.title('test predict')
+plt.show()
+trainScore = np.sqrt(mean_squared_error(trainY, trainPredict))
+testScore = np.sqrt(mean_squared_error(testY, testPredict))
+print('Train Score: %.6f RMSE' % (trainScore))
+print('Test Score: %.6f RMSE' % (testScore))
+# round predictions
+# rounded = [round(x[0]) for x in predictions]
+# print(rounded)
+
 # Summarize history for accuracy
 plt.plot(history.history['mean_absolute_percentage_error'])
 plt.plot(history.history['val_mean_absolute_percentage_error'])
@@ -98,15 +127,4 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
-"""
-# Make predictions
-trainPredict = model.predict(trainX)
-testPredict = model.predict(testX)
-trainScore = np.sqrt(mean_squared_error(trainY[0], trainPredict[:, 0]))
-testScore = np.sqrt(mean_squared_error(testY[0], testPredict[:, 0]))
-print('Train Score: %.2f RMSE' % (trainScore))
-print('Test Score: %.2f RMSE' % (testScore))
-# round predictions
-# rounded = [round(x[0]) for x in predictions]
-# print(rounded)
 """
