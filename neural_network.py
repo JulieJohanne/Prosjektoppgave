@@ -21,10 +21,12 @@ from sklearn import preprocessing
 #np.random.seed(seed)
 
 # Prepare data
-data = np.column_stack((np.loadtxt('input_new.txt'), np.loadtxt('output_new.txt')))
+data = np.column_stack((np.loadtxt('input_150.txt'), np.loadtxt('output_150.txt')))
 data = np.column_stack((np.arange(len(data)), data))
+print('data', data)
+print('arange', np.arange(len(data)))
 np.random.shuffle(data)
-print(data)
+print('data shuffled', data)
 X = np.array([data[:, 1], data[:, 2]/data[:, 3], data[:, 4], data[:, 5]/252]).T 
 Y = np.array(data[:, -1]/data[:, 3])
 
