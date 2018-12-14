@@ -8,6 +8,7 @@ from tensorflow import keras
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
+from keras import optimizers
 # from keras.layers import LSTM
 # from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
@@ -25,10 +26,9 @@ data = np.column_stack((X, Y))
 np.random.shuffle(data)
 X = np.array([data[:, 0], data[:, 1]/data[:, 2], data[:, 3], data[:, 4]/252]).T  #data[:, :-1]
 Y = np.array(data[:, -1]/data[:, 2])
-# standardised_X = preprocessing.scale(X)
+#standardised_X = preprocessing.scale(X)
 # normalised_X = preprocessing.normalize(X)
 
-henlo
 """
 trainX = X[:int(np.round(0.8*len(X))), :]
 trainY = Y[:int(np.round(0.8*len(X)))]
@@ -39,25 +39,29 @@ testY = Y[int(np.round(0.8*len(X)))+1:]
 # Create model
 input_size = np.shape(X)[1]
 output_size = 1 #np.shape(Y)[1]c
-layers = [40, 40, 40, 40]
-activation_function = 'relu'
-output_function = 'sigmoid'
+layers = [20, 20, 20, 20, 20]
+activation_function = 'tanh' #'relu'
+output_function = 'sigmoid' # tanh
 
 model = Sequential()
 model.add(Dense(layers[0], input_dim=input_size, activation=activation_function))
 model.add(Dropout(0.4))
 model.add(Dense(layers[1], activation=activation_function)) 
-model.add(Dropout(0.4))
+model.add(Dropout(0.5))
 model.add(Dense(layers[2], activation=activation_function))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-model.add(Dropout(0.3))
+model.add(Dropout(0.5))
 model.add(Dense(layers[3], activation=activation_function))
-model.add(Dropout(0.2))
+model.add(Dropout(0.5))
+model.add(Dense(layers[4], activation=activation_function))
+model.add(Dropout(0.5))
 model.add(Dense(output_size, activation=output_function))
 
 model.summary()
 
 # Compile model
-loss_function = 'mean_squared_error'  # 'binary_crossentropy' 'binary_crossentropy' 
+#sgd = optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
+#rmsPROP = 
+loss_function = 'mean_absolute_percentage_error'  #'mean_squared_error'  # 'binary_crossentropy' 'binary_crossentropy' 
 optimizing_algorithm = 'adam'  # 'nadam'  # 'sdg'
 model.compile(loss=loss_function, optimizer=optimizing_algorithm, metrics=['mse', 'mae', 'mape'])
 
