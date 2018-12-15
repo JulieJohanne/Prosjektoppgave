@@ -43,9 +43,9 @@ def simulate_stock_price_historical(data, time_to_maturity, no_of_time_steps, no
 
 
 def simulate_BS(stock_price, exercise_price, time_to_expiry, risk_free_rate, current_time, volatility=None):
-    S, K, T, r = stock_price, exercise_price, time_to_expiry / 250, risk_free_rate,
+    S, K, T, r = stock_price, exercise_price, time_to_expiry / 250, risk_free_rate
     t = current_time
-    if volatility==None:
+    if volatility.any()==None:
         S = stock_price[-1*time_to_maturity, 1] 
         _, volatility = parameter_estimation(stock_price)
     d1 = (np.log(S / K) + (r + 0.5 * np.power(volatility, 2) * (T - t))) / (volatility * np.sqrt(T - t))

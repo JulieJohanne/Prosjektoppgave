@@ -23,10 +23,7 @@ from sklearn import preprocessing
 # Prepare data
 data = np.column_stack((np.loadtxt('input_150.txt'), np.loadtxt('output_150.txt')))
 data = np.column_stack((np.arange(len(data)), data))
-print('data', data)
-print('arange', np.arange(len(data)))
 np.random.shuffle(data)
-print('data shuffled', data)
 X = np.array([data[:, 1], data[:, 2]/data[:, 3], data[:, 4], data[:, 5]/252]).T 
 Y = np.array(data[:, -1]/data[:, 3])
 
@@ -51,10 +48,9 @@ trainX = X[:index_slice, :]
 trainY = Y[:index_slice]
 testX = X[index_slice:, :]
 testY = Y[index_slice:]
-print(np.c_[data[index_slice:, 0], testX])
 np.savetxt('testX.txt', np.c_[data[index_slice:, 0], testX])
 np.savetxt('testY.txt', testY)
-"""
+
 # Create model
 #input_size = np.shape(X)[1]
 #output_size = 1 #np.shape(Y)[1]c
@@ -129,4 +125,3 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
-"""
