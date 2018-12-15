@@ -1,0 +1,341 @@
+% Local Variables:
+% TeX-master: "master"
+% End:
+% med kapitler.
+\documentclass[a4paper, twoside, titlepage, 11pt]{report}
+
+% Så sier vi fra om hvilke tilleggspakker vi trenger
+% til dokumentet vårt. De som du ikke trenger (se kommentaren) 
+% kan det være en fordel å kommentere ut (sett prosenttegn foran),
+% da vil kompilering gå raskere.
+
+%\documentclass[tikz,border=2mm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+
+
+%\usepackage[norsk]{babel}	% norske navn rundt omkring
+\usepackage[T1]{fontenc}		% norsk tegnsett (æøå)
+\usepackage[utf8]{inputenc}	% norsk tegnsett
+\usepackage{geometry}		% anbefalt pakke for å styre marger.
+
+\usepackage{amsmath,amsfonts,amssymb} % matematikksymboler
+\usepackage{amsthm}                   % for å lage teoremer og lignende.
+\usepackage{graphicx}                 % inkludering av grafikk
+\usepackage{subfig}                   % hvis du vil kunne ha flere
+                                      % figurer inni en figur
+\usepackage{listings}                 % Fin for inkludering av kildekode
+
+%\usepackage{hyperref}                % Lager hyperlinker i evt. pdf-dokument
+                                      % men har noen bugs, så den er kommentert
+                                      % bort her.
+                                 
+% Indeksgenerering er kommentert ut her. Ta bort prosenttegnene
+% hvis du vil ha en indeks:
+%\usepackage{makeidx}     
+%\makeindex              
+
+% Selve dokumentet begynner:
+
+\begin{document}
+
+% På forsida skal vi ikke ha noen sidenummerering:
+
+\pagestyle{empty}
+\pagenumbering{roman}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+\vspace*{\stretch{1}}
+\noindent\HRule
+\begin{center}
+  \huge
+  \noindent Project Thesis \\ [7mm]
+  \large
+  \noindent\emph{Julie Johanne Uv}
+\end{center}
+\noindent\HRule
+\vspace*{\stretch{2}}
+\begin{center}
+\Large\textsc{Institutt for matematiske fag --- NTNU 2018}
+\end{center}
+
+% Local Variables:
+% TeX-master: "master"
+% End:
+
+% Romerske tall på alt før selve rapporten starter er pent.
+\pagenumbering{roman}
+
+% For å ikke begynne innholdslista på baksida av forsida:
+\cleardoublepage
+% (kun aktuelt når man har twoside som global opsjon)
+
+% Nå vi vil ha noe i topp- og bunnteksten
+\pagestyle{headings}
+
+% Si til LaTeX at vi vil ha ei innholdsliste generert akkurat her:
+\tableofcontents
+
+% Pass på at neste side ikke begynner på baksida av en annen side.
+\cleardoublepage
+
+% Arabisk (vanlige tall) sidenummerering. Starter på side 1 igjen.
+\pagenumbering{arabic}
+
+% Inkluder alle de andre kildefilene:
+
+% NB: Vi trenger ikke ta med filendelsen .tex her. Den vet
+%     LaTeX om selv!
+
+%\input{innledning}
+
+%\input{bakgrunn}
+
+%\input{resultater}
+\tableofcontents
+\chapter{Introduction}
+\chapter{Financial theory}
+
+\section{Effiecient Market Hypopthesis}
+Efficient Market Hypothesis - why do we model stocks as a log normal random walk?
+Financial Market?
+The financial market is a common term for markets that trade different financial instruments such as stocks, bonds, currencies and different financial derivatives such as futures, forwards, options and swaps. The Efficient Market Hypothesis is stated in several ways, but essentially amounts to the properties that 
+\begin{itemize}
+    \item the current market price reflects history up until the present, but does not hold any further information about the future
+    \item  that the market moves immediately with the arrival of new information.
+\end{itemize}
+ From the former it follows that stock prices has the Markov Property, i.e. the future price depends only upon the present price.
+ \begin{equation}
+     P(X_{t+1}=x_{t+1} | X_{t}=x_{t}, \hdots , X_0 =x_0) = P(X_{t+1}=x_{t+1} | X_{t}=x_{t})
+ \end{equation}
+ From the latter it follows that the prices will move with the arrival of new information and as information essentially moves randomly, it is reasonable to model the prices randomly as well. From the efficient market hypothesis it also follows that assets are always traded at their fair value(reference) and one can never outperform the market. This can be demonstrated by the following - assume a stock is undervalued or overvalued. Then as market participants discovers,the price will immediately adjust. The Efficient Market Hypothesis does not mean that one can never profit from the market, but that one must do so at a higher risk. 
+ (Not perfectly efficient in practice.)
+
+\section{Arbitrage}
+(A result from EMH - there is no arbitrage.)
+Arbitrage is a risk-free instantaneous profit which can be made by a exploiting price differences in the same or similar financial instruments or assets (by simultaneous purchase and sale).  Arbitrage opportunities will occur as the market is not perfectly efficient, but prices will adjust quite soon(?). Hence it is reasonable to assume market efficiency and thus no arbitrage in financial pricing models.
+
+\subsection{Assets}
+A financial asset is an asset in which its value comes from a so called contractual agreement - an agreement that cash flows will be paid to the purchaser at times specified by the contract. Examples of financial assets are cash, equities, indices and commodities. As argued, a financial asset (traded on the market) may be modeled randomly and it is common to value it's price movement by a stochastic differential equation of the following form.
+\begin{equation}
+    dS(t) = u(S, t)dt + w(S, t)dW(t)
+\end{equation}
+Here $S(t)$ is the value of the asset price at time $t$, $u$ and $w$ are arbitrary functions of asset price and time. $dX$ is a normally distributed random variable (appendix on r.v?) with the following properties
+\begin{align}
+    E[dW(t)] &= 0 \\
+    Var[dW(t)] &= dt.
+\end{align}
+$dW(t)$ follows what is called a Wiener process(or a Brownian motion)(appendix?) and represents the randomness of the asset (without it we would just have a deterministic differential equation). ($u$ is the drift term and $w$ is the diffusion term.)
+\\
+Stocks:\\
+By issuing stocks to investors, a company can raise capital. If the company increases it's revenue, the value of the stocks increases. In addition the company can decide to pay out a part of the revenue as dividend per share to its shareholders. 
+\\
+When one values stocks, it is more reasonable to look at the relative change in price rather then the actual level of the price, i.e. $dS(t)/S(t)$ rather then $S(t)$. The contributions to the relative change also known as the return is a drift term containing the average growth of the sset price, $mu$, and a random term containing the volatility measuring the standard deviation of the returns, $\sigma$.
+\begin{equation}
+    dS(t) = \mu S(t) dt + +\sigma S(t) dW(t).
+\label{SDE}
+\end{equation}
+Again, here $dW(t)$ is the normally distributed random variable as stated above. (Another incentive/reason to evaluate the returns rather then the level is that they tend to increase exponentially by observation.)
+\\
+$\mu$ and $\sigma$ can both be functions of $S$ and $t$. The most basic model is taking $\mu$ and $\sigma$ to be constants. The unique solution to \eqref{SDE} is (Ito's Lemma appendix?)
+\begin{equation}
+    S(t) = S(0)\exp((\mu - \frac{1}{2}\sigma^2)t + \sigma W(t))
+\end{equation}
+from which one can obtain the result
+\begin{equation}
+    \ln\Big(\frac{S(t)}{S(0)}\Big) \sim N((\mu-\frac{1}{2}\sigma^2)t, \sqrt{t}).
+\end{equation}
+(Using this one can estimate the parameters using the historical logarithmic returns by the following.
+\begin{align}
+    r_i &= \log\big(\frac{S_{i+1}}{S_i}\big)\\
+    m &= \frac{1}{n dt} \sum_{i = 0}^{n-1} r_i\\
+    \hat{\sigma} &= \frac{1}{(n-1) dt} \sum_{i = 0}^{n-1} (r_i - m)^2\\
+    \hat{\mu} &= m + \frac{1}{2}\hat{\sigma}^2)
+\end{align}
+
+(Argue more why lognormal random walk is reasonable? Says something about interest rates, how it also can be modelled as a stochastic variable, maybe not okay to assume its constant, depends on lifespan of option. )
+
+\subsection{Derivatives}
+Derivatives are instruments where the value is derived from or rely upon an underlying asset (or a group of assets) such as the financial assets stated above or interest rates. (It is a contract between two or more parties.) Examples of derivatives are options, futures, forwards and  swaps. This thesis will (focus on) valuing options.
+\\
+And option is a contract between two parties that gives the holder of the option the right but not the obligation to buy or sell the underlying asset at a specified time and at a specified price called the exercise (or strike) price, in the future. As stated the purchaser of the option is the holder of the option, while the seller is the writer. An option in which the holder has the right to buy the underlying is called a call option, and an option in which the holder has the right to sell the underlying is called a put option. Then there are several types of call and put options. American options for example can be exercised at any time up until expiry, while the one which will be examined(?) further in this thesis is the European option which can only be exercised at expiry. The payoff function for a European call option at expiry $T$ is
+\begin{equation}
+    C(S,T) = max(S(T)-E, 0).
+\end{equation}
+$E$ is the exercise price. Similarly, the payoff function for a European put option is
+\begin{equation}
+    P(S,T) = max(E-S(T), 0).
+\end{equation}
+
+What affects the value of an option? 
+The value of an option is dependent on the underlying asset price and the time to maturity (for obvious reasons) which both will change during the life of the option. In addition, the value of the option will be affected by the exercise price - e.g. the higher the exercise price of a call option, the higher the value of the option - and the interest rate. The interest rate affects the price through time value as the payoff will be received in the future. Lastly, the volatility will have an  effect on the option value(measures the fluctuation, annualised standard dedviation of the returns).
+Using a 
+Assets, stocks, derivatives, arbitrage
+(Risk neutrality, ricing derivatives in a risk-neutral world)
+(Write about volatility. How much data to use for calculating historical volatility. Implied volatilty.)
+
+\chapter{Monte Carlo}
+
+\chapter{Black-Scholes?}
+
+\chapter{Artificial Neural Networks}
+\section{Deep Feedforward Networks}
+Multilayer perceptrons (MLPs) are a type of deep feedforward networks. It is called feedforward because the input $\textbf{x}$ floats forward through the network to finally produce an output $\textbf{y}$. The goal of the network is to approximate some function $f$ so that $\textbf{y} = f(\textbf{x})$. It does so by defining a mapping $\textbf{y} = f^*(\textbf{x}; \theta)$ for which it optimizes the parameters $\theta$ by learning/training. 
+\\ \\
+(Difference between linear perceptron and mulitlayer  non-linear activation function. Why can it approximate non-linear functions?)
+\\ \\
+The network is deep if it consists of two or more hidden layers. Hidden layers are classified by being between the input and the output layer. Each layer in the network defines an activation function $w$ and initializes weights $W_{ij}$ for each node and a bias $b^{(i)}$. 
+If the number of hidden layers is $n$, this is called the depth of the network, the number of nodes in each hidden layer is $m_i$ for $i = 1, ..., n$, this is called the width of the network and $\textbf{x} \in \mathbb{R}^d$, $W^(1) \in \mathbb{R}^{m_1 \times d}$, $W^(i) \in \mathbb{R}^{m_i \times m_{i-1}}$ for $i = 2, \hdots n$, $b^{(i)} \in \mathbb{R}$ for $i = 1, \hdots n$ then the process in vector notation would look like
+
+\begin{align*}
+    &\textbf{h}^{(1)}  = w(b^{(1)}+W^{(1)}\textbf{x}) \\
+    &\textbf{h}^{(2)}  = w(b^{(2)}+W^{(2)}\textbf{h}^{(1)}) \\
+    &      \vdots  \\
+    &\textbf{h}^{(n)}  = w(b^{(n)}+W^{(n)}\textbf{h}^{(n-1)}) \\
+    &\textbf{y} = w^{(out)}(b^{(out)} + \textbf{\text{w}}^{\text{T}}\textbf{h}^{(n)})
+\end{align*}
+
+%Fiks følgende figur
+\begin{figure}
+\begin{tikzpicture}[
+plain/.style={
+  draw=none,
+  fill=none,
+  },
+net/.style={
+  matrix of nodes,
+  nodes={
+    draw,
+    circle,
+    inner sep=10pt
+    },
+  nodes in empty cells,
+  column sep=2cm,
+  row sep=-9pt
+  },
+>=latex
+]
+\matrix[net] (mat)
+{
+|[plain]| \parbox{1.3cm}{\centering Input\\layer} & |[plain]| \parbox{1.3cm}{\centering Hidden\\layer} & |[plain]| \parbox{1.3cm}{\centering Output\\layer} \\
+& |[plain]| \\
+|[plain]| & \\
+& |[plain]| \\
+  |[plain]| & |[plain]| \\
+& & \\
+  |[plain]| & |[plain]| \\
+& |[plain]| \\
+  |[plain]| & \\
+& |[plain]| \\    };
+\foreach \ai [count=\mi ]in {2,4,...,10}
+  \draw[<-] (mat-\ai-1) -- node[above] {x \mi} +(-2cm,0);
+\foreach \ai in {2,4,...,10}
+{\foreach \aii in {3,6,9}
+  \draw[->] (mat-\ai-1) -- (mat-\aii-2);
+}
+\foreach \ai in {3,6,9}
+  \draw[->] (mat-\ai-2) -- (mat-6-3);
+\draw[->] (mat-6-3) -- node[above] {Ouput} +(2cm,0);
+\end{tikzpicture}
+
+\begin{tikzpicture}[
+init/.style={
+  draw,
+  circle,
+  inner sep=2pt,
+  font=\Huge,
+  join = by -latex
+},
+squa/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large,
+  join = by -latex
+},
+start chain=2,node distance=13mm
+]
+\node[on chain=2] 
+  (x2) {$x_2$};
+\node[on chain=2,join=by o-latex] 
+  {$w_2$};
+\node[on chain=2,init] (sigma) 
+  {$\displaystyle\Sigma$};
+\node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activate \\ function}}]   
+  {$f$};
+\node[on chain=2,label=above:Output,join=by -latex] 
+  {$y$};
+\begin{scope}[start chain=1]
+\node[on chain=1] at (0,1.5cm) 
+  (x1) {$x_1$};
+\node[on chain=1,join=by o-latex] 
+  (w1) {$w_1$};
+\end{scope}
+\begin{scope}[start chain=3]
+\node[on chain=3] at (0,-1.5cm) 
+  (x3) {$x_3$};
+\node[on chain=3,label=below:Weights,join=by o-latex] 
+  (w3) {$w_3$};
+\end{scope}
+\node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
+
+\draw[-latex] (w1) -- (sigma);
+\draw[-latex] (w3) -- (sigma);
+\draw[o-latex] (b) -- (sigma);
+
+\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (x3.south west);
+\end{tikzpicture}
+\caption{Feedforward neural network}
+\end{figure}
+
+\subsection{Activation function} 
+Different choices for activation functions are the sigmoid function 
+\begin{equation*}
+    f(z) = \frac{1}{1+e^{-z}},
+\end{equation*}
+hyperbolic tangent, tanh,
+\begin{equation*}
+    f(z) = \frac{1+e^{-2z}}{1-e^{-2z}},
+\end{equation*}
+rectified linear units, ReLU,
+\begin{equation*}
+    f(z) = max(0,z),
+\end{equation*}
+softplus,
+\begin{equation*}
+    f(z) = \ln(1+e^z)
+\end{equation*}
+and several others. (ReLU have become especially popular as of lately and is used for all convolutional networks.)
+
+\section{Gradient-Based Training}
+\subsection{Backpropagation}
+In order to train the model, one needs to specify a cost function to minimise. This cost function often involves a cross-entropy between the training data and the predicted data(?) and a regularising term (penalising complex models to avoid overfitting). (write more about cost function?).
+\\
+In order to minimise the cost function, the gradient of the model has to be calculated. This is done using the backpropagation algorithm. 
+
+\subsection{Stochastic Gradient Descent}
+Write about the different loss functions, optimisers, activation functions, dropout rate and other regularising techniques. Argument about choice made.
+
+(Define input and output of the neural network, why are these reasonable?)
+
+
+
+% Bibliografi/referanseliste skal komme før appendiks
+\bibliography{kurs}
+\bibliographystyle{plain}
+
+% En latex-kommando for å si fra at kapitlene/seksjonene fra nå 
+% av skal nummereres med store bokstaver:
+\appendix
+
+%\input{appendiks}
+
+% Indeks for rapporten. Ta bort prosenttegn hvis du vil ha det med.
+%\printindex
+
+% Avslutter dokumentet vårt:
+\end{document}
+
+% Local Variables:
+% TeX-master: "master"
+% End:
