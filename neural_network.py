@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 import numpy as np
 import matplotlib.pyplot as plt
-# import pandas
-# import math
 import tensorflow as tf
 from tensorflow import keras
 from keras.models import Sequential
@@ -54,21 +52,23 @@ np.savetxt('testY.txt', testY)
 # Create model
 #input_size = np.shape(X)[1]
 #output_size = 1 #np.shape(Y)[1]c
-layers = [20, 20, 20, 20, 20]
+layers = [60, 60, 60, 60, 60, 60]
 #activation_function = 'tanh' #'relu'
 #output_function = 'sigmoid' # tanh
 model = Sequential()
 model.add(Dense(layers[0], input_dim=np.shape(X)[1]))
-model.add(Dropout(0.4))
-model.add(Dense(layers[1], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01))) 
-model.add(Dropout(0.4))
-model.add(Dense(layers[2], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))  
-model.add(Dropout(0.4))
-model.add(Dense(layers[3], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))
-model.add(Dropout(0.4))
-model.add(Dense(layers[4], activation='relu'))#,  kernel_regularizer=regularizers.l2(0.01)))
-model.add(Dropout(0.4))
-model.add(Dense(1, activation='sigmoid'))
+model.add(Dropout(0.1))
+model.add(Dense(layers[1], activation='elu'))#,  kernel_regularizer=regularizers.l2(0.01))) 
+model.add(Dropout(0.1))
+model.add(Dense(layers[2], activation='elu'))#,  kernel_regularizer=regularizers.l2(0.01)))  
+model.add(Dropout(0.1))
+model.add(Dense(layers[3], activation='elu'))#,  kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dropout(0.1))
+model.add(Dense(layers[4], activation='elu'))#,  kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dropout(0.1))
+model.add(Dense(layers[5], activation='softsign'))#,  kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dropout(0.1))
+model.add(Dense(1, activation='softsign'))
 
 model.summary()
 
@@ -94,11 +94,13 @@ model.evaluate(trainX, trainY, batch_size=128, verbose=1)
 # Make predictions
 trainPredict = model.predict(trainX)
 testPredict = model.predict(testX)
-plt.plot(trainPredict, '*')
-plt.title('train predict')
+plt.plot(trainY[-40:], 'r*')
+plt.plot(trainPredict[-40:], 'b*')
+plt.title('train predict vs true values')
 plt.show()
-plt.plot(testPredict, '*')
-plt.title('test predict')
+plt.plot(testY[-40:], 'r*')
+plt.plot(testPredict[-40:], 'b*')
+plt.title('test predict vs true values')
 plt.show()
 trainScore = np.sqrt(mean_squared_error(trainY, trainPredict))
 testScore = np.sqrt(mean_squared_error(testY, testPredict))
