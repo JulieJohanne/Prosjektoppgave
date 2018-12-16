@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Prosjektoppgave"] 1544878803 "Prosjektoppgave.aux" "Prosjektoppgave.bbl" "Prosjektoppgave" 1544878803
+["bibtex Prosjektoppgave"] 1544895463 "Prosjektoppgave.aux" "Prosjektoppgave.bbl" "Prosjektoppgave" 1544895467
   "C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Prosjektoppgave.aux" 1544878729 1745 7265f55108dfd5d546412ecc3b5eb0f1 ""
+  "Prosjektoppgave.aux" 1544895466 1781 2da23723933f7aa01e02e64230d90d24 ""
   "kurs.bib" 0 -1 0 ""
   (generated)
-  "Prosjektoppgave.bbl"
   "Prosjektoppgave.blg"
-["pdflatex"] 1544878726 "c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty" "Prosjektoppgave.pdf" "Prosjektoppgave" 1544878803
+  "Prosjektoppgave.bbl"
+["pdflatex"] 1544895463 "c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty" "Prosjektoppgave.pdf" "Prosjektoppgave" 1544895467
   "C:/Users/jju95/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1544712335 28976 5092846552070c6fc14738476100d791 ""
   "C:/Users/jju95/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1544712337 31952 7be7722167e5b7fa0bd84def7dd6ba12 ""
   "C:/Users/jju95/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1544712340 40136 7a5424109f6a998adb08737acbf5b74a ""
@@ -185,13 +185,13 @@
   "C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgfrcs.sty" 1440860242 325 2bcd023400636339210573e2b3ee298b ""
   "C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/tex/latex/subfig/subfig.sty" 1121277410 22049 9ef165ca6df8815c92e693146a376c92 ""
   "C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "Prosjektoppgave.aux" 1544878729 1745 7265f55108dfd5d546412ecc3b5eb0f1 ""
+  "Prosjektoppgave.aux" 1544895466 1781 2da23723933f7aa01e02e64230d90d24 ""
   "Prosjektoppgave.bbl" 0 -1 0 "bibtex Prosjektoppgave"
-  "Prosjektoppgave.sty" 1544878719 16132 3fcca115e4b960115256200eb23b232a ""
-  "Prosjektoppgave.toc" 1544878729 920 d367b82a10f27d90b87c3dc1e54e8a52 ""
-  "c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty" 1544878719 16132 3fcca115e4b960115256200eb23b232a ""
+  "Prosjektoppgave.sty" 1544895459 22026 50ebdcf561e9b70e93661e65742abe2f ""
+  "Prosjektoppgave.toc" 1544895466 931 aef3eb7fa04f1e419e1d52a16456a2cf ""
+  "c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty" 1544895459 22026 50ebdcf561e9b70e93661e65742abe2f ""
   (generated)
   "Prosjektoppgave.toc"
-  "Prosjektoppgave.pdf"
-  "Prosjektoppgave.log"
   "Prosjektoppgave.aux"
+  "Prosjektoppgave.log"
+  "Prosjektoppgave.pdf"

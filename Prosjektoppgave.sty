@@ -109,19 +109,20 @@ The financial market is a common term for markets that trade different financial
  \begin{equation}
      P(X_{t+1}=x_{t+1} | X_{t}=x_{t}, \hdots , X_0 =x_0) = P(X_{t+1}=x_{t+1} | X_{t}=x_{t})
  \end{equation}
- From the latter it follows that the prices will move with the arrival of new information and as information essentially moves randomly, it is reasonable to model the prices randomly as well. From the efficient market hypothesis it also follows that assets are always traded at their fair value(reference) and one can never outperform the market. This can be demonstrated by the following - assume a stock is undervalued or overvalued. Then as market participants discovers,the price will immediately adjust. The Efficient Market Hypothesis does not mean that one can never profit from the market, but that one must do so at a higher risk. 
+ Asinformation essentially moves randomly, it follows from the latter that it is reasonable to model the prices randomly as well. If the market really is efficient, then assets must always be traded at their fair value(reference) and one can never outperform the market. 
+ If assets were over- or undervalued, the prices would immediately adjust. The Efficient Market Hypothesis does not mean that one can never profit from the market, but that one must do so at a risk. 
  (Not perfectly efficient in practice.)
 
 \section{Arbitrage}
 (A result from EMH - there is no arbitrage.)
-Arbitrage is a risk-free instantaneous profit which can be made by a exploiting price differences in the same or similar financial instruments or assets (by simultaneous purchase and sale).  Arbitrage opportunities will occur as the market is not perfectly efficient, but prices will adjust quite soon(?). Hence it is reasonable to assume market efficiency and thus no arbitrage in financial pricing models.
+Arbitrage is a risk-free instantaneous profit which can be made by a exploiting price differences in the same or similar financial instruments or assets (by simultaneous purchase and sale).  Arbitrage opportunities will occur as the market is not perfectly efficient, but prices will adjust qiute fast(?). Hence it is reasonable to assume market efficiency and thus no arbitrage in financial pricing models.
 
 \subsection{Assets}
-A financial asset is an asset in which its value comes from a so called contractual agreement - an agreement that cash flows will be paid to the purchaser at times specified by the contract. Examples of financial assets are cash, equities, indices and commodities. As argued, a financial asset (traded on the market) may be modeled randomly and it is common to value it's price movement by a stochastic differential equation of the following form.
+A financial asset is an asset where its value comes from a so called contractual agreement - an agreement that cash flows will be paid to the purchaser at times specified by the contract. Examples of financial assets are cash, equities, indices and commodities. As argued, a financial asset (traded on the market) may be modeled randomly and it is common to value it's price movement by a stochastic differential equation of the following form.
 \begin{equation}
     dS(t) = u(S, t)dt + w(S, t)dW(t)
 \end{equation}
-Here $S(t)$ is the value of the asset price at time $t$, $u$ and $w$ are arbitrary functions of asset price and time. $dX$ is a normally distributed random variable (appendix on r.v?) with the following properties
+Here $S(t)$ is the value of the asset price at time $t$, $u$ and $w$ are arbitrary functions of asset price and time. $dW$ is a normally distributed random variable (appendix on r.v?) with the following properties
 \begin{align}
     E[dW(t)] &= 0 \\
     Var[dW(t)] &= dt.
@@ -131,7 +132,7 @@ $dW(t)$ follows what is called a Wiener process(or a Brownian motion)(appendix?)
 Stocks:\\
 By issuing stocks to investors, a company can raise capital. If the company increases it's revenue, the value of the stocks increases. In addition the company can decide to pay out a part of the revenue as dividend per share to its shareholders. 
 \\
-When one values stocks, it is more reasonable to look at the relative change in price rather then the actual level of the price, i.e. $dS(t)/S(t)$ rather then $S(t)$. The contributions to the relative change also known as the return is a drift term containing the average growth of the sset price, $mu$, and a random term containing the volatility measuring the standard deviation of the returns, $\sigma$.
+When one values stocks, it is more reasonable to look at the relative change in price rather then the actual level of the price, i.e. $dS(t)/S(t)$ rather then $S(t)$. The contributions to the relative change also known as the return is a drift term containing the average growth of the asset price, $\mu$, and a random term containing the volatility measuring the standard deviation of the returns, $\sigma$.
 \begin{equation}
     dS(t) = \mu S(t) dt + +\sigma S(t) dW(t).
 \label{SDE}
@@ -169,15 +170,83 @@ $E$ is the exercise price. Similarly, the payoff function for a European put opt
 \end{equation}
 
 What affects the value of an option? 
-The value of an option is dependent on the underlying asset price and the time to maturity (for obvious reasons) which both will change during the life of the option. In addition, the value of the option will be affected by the exercise price - e.g. the higher the exercise price of a call option, the higher the value of the option - and the interest rate. The interest rate affects the price through time value as the payoff will be received in the future. Lastly, the volatility will have an  effect on the option value(measures the fluctuation, annualised standard dedviation of the returns).
+The value of an option is dependent on the underlying asset price and the time to expiry (for obvious reasons) which both will change during the life of the option. In addition, the value of the option will be affected by the exercise price - e.g. the higher the exercise price of a call option, the higher the value of the option - and the interest rate. The interest rate affects the price through time value as the payoff will be received in the future. Lastly, the volatility will have an  effect on the option value(measures the fluctuation, annualised standard dedviation of the returns).
 Using a 
 Assets, stocks, derivatives, arbitrage
 (Risk neutrality, ricing derivatives in a risk-neutral world)
-(Write about volatility. How much data to use for calculating historical volatility. Implied volatilty.)
-
+\\Volatility:\\
+Volatility is the standard deviations of the logarithmic returns, so it might be viewed as a measurement of how random the asset price is(?). There are several ways of modelling the volatility. E.g.
+\begin{itemize}
+  \item As a stochastic differential equation. This is a very reasonable model as the volatility seems to have a random component just as our asset price model. Then one would have two stochasstic differential equations
+  \begin{align}
+    dS(t) &= \mu S(t) dt + \sqrt{\nu (t)} S(t) dW_1(t) \\
+    d \nu (t) &= \alpha(\nu, t) dt + \beta(\nu, t) dW_2(t)
+  \end{align}
+  $dW_1(t)$ and $dW_2(t)$ are two Wiener processes(which may be correlated?). 
+  \item Historical volatility uses historical values to calculate some parameter estimation for the voltility based on statistics. (This may be the maximum likelihood e.g.). In this paper $\hat{\sigma}$ has been used. A question that arises for the use of the historical volatility is how much historical data one should use in the calculations.
+  \item Implied volatility uses the quoted prices for options today and exploiting the idea that the market "knows" the volatility. When one has today's option price, asset price, life span of option, risk free rate and strike pricec one can solve the Black Scholes formula(which will be discussed in more detail later) backwards to find the implied volatility.
+\end{itemize}
+Risk neutrality:
+\\
+Risk can be interpreted(?) as the variance of the return - how much the price deviates from the expected price(?). There are two types of risk, namely specific and non-specific risk.
+The former is risk associated with the specific asset/company and can be minimised by diversification(building a portfolio with negatively correlated assets). The latter is risk associated with factors influencing the whole market and can be reduced by hedging(taking opposite psoitions in similar derivatives which gives less return and less non-specific risk). 
+Looking at the risk-neutral case means that investor's risk preferances are irrelevant as all (non-specific) risk can be hedged away. There is no profit to be made above the risk free return. Practically this means that we replace the rate of growth by the risk free rate for all random walks which means that eventhough investors may disagree on the rate of growth, they will value options the same.
 \chapter{Monte Carlo}
 
-\chapter{Black-Scholes?}
+\chapter{The Black-Scholes Model}
+When deriving the Black Scholes formula, one makes the following assuptions
+\begin{itemize}
+  \item The underlying asset follows a lognormal random walk.
+  \item The risk free rate, $r$ and volatility $\sigma$ are known functions of time.( This is not a very realistic assumption as both $r$ and $\sigma$ also are stochastic. There are methods that also model them as stochastic differential equations.)
+  \item There are no transaction costs for trading the underlying assets. (Also not a realistic assumption. Also exists models that take this into account.)
+  \item Delta hedging is possible - underlying can be traded continously and one can buy and sell any number(not nessecarely an integer) of the underlying
+  \item There are no arbitrage oportunities.
+  \item There are no dividends paid out by underlying asset during the life of the option. (This can be adjusted for if one knows when and how much dividend will be paid out in advance.)
+\end{itemize}
+It is reasonable to assume the optionvalue which will be denoted by $V$ is a funciton of time, $t$, (even more specific, time to expiry, $T-t$) and the underlying asset $S$.
+Consider the following portfolio, $\Pi$
+\begin{equation}
+  \Pi = V(S,t) - \Delta S
+\end{equation}
+where $\Delta$ is some quantity of the underlying asset, called the delta. Next we want to consider a infinitessimal change of the portfolio for some time interval $(t, t+dt)$. 
+We assume that $S$ follows a lognormal random walk (eqref). By Itô's Lemma 
+\begin{equation}
+  dV = \frac{\partial V}{\partial S} dS + \frac{\partial V}{\partial t} dt + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} dt.
+\end{equation}
+Hence we obtain the following expression for $d\Pi$ 
+\begin{equation}
+  d\Pi = \Big(\mu S \frac{\partial V}{\partial S} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + \frac{\partial V}{\partial t} -\mu \Delta S \Big) dt + \sigma S \Big(\frac{\partial V}{\partial S} -\Delta \Big)dW.
+\end{equation} 
+By chosing $\Delta = \frac{\partial V}{\partial S}$ we eliminate the random/stochastic term and thereby eliminate the risk connected to the randomness(?). This is called delta hedging and is a dynamic hedging strategy. 
+Our remaining epression for $d\Pi$ is
+\begin{equation}
+  d\Pi  = \Big(\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}\Big) dt
+\end{equation} 
+and thus completely deterministic. As mentioned, this is a riskless portfolio and the change in value of the portfolio should therefore correspond to the amount we would get on return from a risk-free account (by the assumption  of no arbitrage). I.e.
+\begin{align}
+  d\Pi &= r\Pi dt \\
+  \Big(\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 + \frac{\partial^2 V}{\partial S^2}\Big) dt &= r\Big(V - \Delta S \Big) dt
+\end{align}
+From the latter we obtain the Black Scholes partial differential equation
+\begin{equation}
+  \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} \ rS\frac{\partial V}{\partial S} -rV = 0. 
+  \label{BS}
+\end{equation}
+In order to solve \eqref{BS} we need some boundary and final conditions.(opposite of inital conditions). For a european call otpion, this would be
+\begin{align}
+  &V(S, T) = max(S(T)-E ,0) \\
+  &V(0, t) = 0 \\
+  &V(S, t) = S \text{ as S } \rightarrow \infty
+\end{align}
+This leads to the following closed form solution for European call options.
+\begin{equation}
+  V(S, t) = S N(d_1) - E e^{-r(T-t)} N(d_2)
+\end{equation}
+$N(\cdot)$ is the cumulative normal distribution and
+\begin{align}
+  d_1 &= \frac{\log(S/E)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}} \\
+  d_2 &= \frac{\log(S/E)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}}
+\end{align}
 
 \chapter{Artificial Neural Networks}
 \section{Deep Feedforward Networks}
