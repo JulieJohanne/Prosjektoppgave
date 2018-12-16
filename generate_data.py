@@ -5,7 +5,7 @@ import os
 
 
 #directory = 'C:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave'
-data = np.loadtxt('stock_data.txt')
+data = np.loadtxt('stock_data_150_5.txt')
 
 """"
 # Look at historical volatility by splitting time periods
@@ -56,5 +56,5 @@ for company in np.arange(len(data[:, 0])):
             Y = np.append(Y, (sp.true_option_price(data[company, -time_to_expiry:], E, r)))
             X = np.vstack([X, [volatility, initial_price, E, r, time_to_expiry]])
 
-np.savetxt('output_new.txt', Y)
-np.savetxt('input_new.txt', X)
+np.savetxt('output_150.txt', Y)
+np.savetxt('input_150.txt', X)
