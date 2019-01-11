@@ -3,7 +3,10 @@
 % End:
 % med kapitler.
 \documentclass[a4paper, twoside, titlepage, 11pt]{report}
-
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage[nottoc]{tocbibind}
 % Så sier vi fra om hvilke tilleggspakker vi trenger
 % til dokumentet vårt. De som du ikke trenger (se kommentaren) 
 % kan det være en fordel å kommentere ut (sett prosenttegn foran),
@@ -23,10 +26,11 @@
 \usepackage{amsthm}                   % for å lage teoremer og lignende.
 \usepackage{graphicx}                 % inkludering av grafikk
 \usepackage{subfig}                   % hvis du vil kunne ha flere
-                                      % figurer inni en figur
+\usepackage{fixmath}                                      % figurer inni en figur
 \usepackage{listings}                 % Fin for inkludering av kildekode
+\usepackage[ruled ]{algorithm2e}
 
-%\usepackage{hyperref}                % Lager hyperlinker i evt. pdf-dokument
+\usepackage{hyperref}                % Lager hyperlinker i evt. pdf-dokument
                                       % men har noen bugs, så den er kommentert
                                       % bort her.
                                  
@@ -47,14 +51,17 @@
 \newcommand{\HRule}{\rule{\linewidth}{1mm}}
 
 \vspace*{\stretch{1}}
-\noindent\HRule
+%\noindent\HRule
+\hline
 \begin{center}
   \huge
-  \noindent Project Thesis \\ [7mm]
+  \noindent Project Thesis \\ [5mm]
   \large
+  \hline
+  \\ [3mm]
   \noindent\emph{Julie Johanne Uv}
 \end{center}
-\noindent\HRule
+%\noindent\HRule
 \vspace*{\stretch{2}}
 \begin{center}
 \Large\textsc{Institutt for matematiske fag --- NTNU 2018}
@@ -98,8 +105,6 @@
 \chapter{Financial theory}
 
 \section{Effiecient Market Hypopthesis}
-Efficient Market Hypothesis - why do we model stocks as a log normal random walk?
-Financial Market?
 The financial market is a common term for markets that trade different financial instruments such as stocks, bonds, currencies and different financial derivatives such as futures, forwards, options and swaps. The Efficient Market Hypothesis is stated in several ways, but essentially amounts to the properties that 
 \begin{itemize}
     \item the current market price reflects history up until the present, but does not hold any further information about the future
@@ -109,17 +114,16 @@ The financial market is a common term for markets that trade different financial
  \begin{equation}
      P(X_{t+1}=x_{t+1} | X_{t}=x_{t}, \hdots , X_0 =x_0) = P(X_{t+1}=x_{t+1} | X_{t}=x_{t})
  \end{equation}
- Asinformation essentially moves randomly, it follows from the latter that it is reasonable to model the prices randomly as well. If the market really is efficient, then assets must always be traded at their fair value(reference) and one can never outperform the market. 
+ As information essentially moves randomly, it follows from the latter that it is reasonable to model the prices randomly as well. If the market really is efficient, then assets must always be traded at their fair value(reference) and one can never outperform the market. 
  If assets were over- or undervalued, the prices would immediately adjust. The Efficient Market Hypothesis does not mean that one can never profit from the market, but that one must do so at a risk. 
- (Not perfectly efficient in practice.)
+ %(Not perfectly efficient in practice.)
 
 \section{Arbitrage}
-(A result from EMH - there is no arbitrage.)
-Arbitrage is a risk-free instantaneous profit which can be made by a exploiting price differences in the same or similar financial instruments or assets (by simultaneous purchase and sale).  Arbitrage opportunities will occur as the market is not perfectly efficient, but prices will adjust qiute fast(?). Hence it is reasonable to assume market efficiency and thus no arbitrage in financial pricing models.
+Arbitrage is a risk-free instantaneous profit which can be made by a exploiting price differences in the same or similar financial instruments or assets by simultaneous purchase and sale.  Arbitrage opportunities will occur as the market is not perfectly efficient, but prices will adjust quite fast(?). Hence it is reasonable to assume market efficiency and thus no arbitrage in financial pricing models.
 
-\subsection{Assets}
-A financial asset is an asset where its value comes from a so called contractual agreement - an agreement that cash flows will be paid to the purchaser at times specified by the contract. Examples of financial assets are cash, equities, indices and commodities. As argued, a financial asset (traded on the market) may be modeled randomly and it is common to value it's price movement by a stochastic differential equation of the following form.
-\begin{equation}
+\section{Assets}
+A financial asset is an asset of which value comes from a so called contractual agreement - an agreement that cash flows will be paid to the purchaser at times specified by the contract. Examples of financial assets are cash, equities, indices and commodities. As argued, a financial asset (traded on the market) may be modeled randomly and it is common to value it's price movement by a stochastic differential equation of the following form.
+\begin{equation} \label{eq1}
     dS(t) = u(S, t)dt + w(S, t)dW(t)
 \end{equation}
 Here $S(t)$ is the value of the asset price at time $t$, $u$ and $w$ are arbitrary functions of asset price and time. $dW$ is a normally distributed random variable (appendix on r.v?) with the following properties
@@ -128,119 +132,183 @@ Here $S(t)$ is the value of the asset price at time $t$, $u$ and $w$ are arbitra
     Var[dW(t)] &= dt.
 \end{align}
 $dW(t)$ follows what is called a Wiener process(or a Brownian motion)(appendix?) and represents the randomness of the asset (without it we would just have a deterministic differential equation). ($u$ is the drift term and $w$ is the diffusion term.)
-\\
-Stocks:\\
+\subsection*{Stocks}
 By issuing stocks to investors, a company can raise capital. If the company increases it's revenue, the value of the stocks increases. In addition the company can decide to pay out a part of the revenue as dividend per share to its shareholders. 
-\\
-When one values stocks, it is more reasonable to look at the relative change in price rather then the actual level of the price, i.e. $dS(t)/S(t)$ rather then $S(t)$. The contributions to the relative change also known as the return is a drift term containing the average growth of the asset price, $\mu$, and a random term containing the volatility measuring the standard deviation of the returns, $\sigma$.
-\begin{equation}
-    dS(t) = \mu S(t) dt + +\sigma S(t) dW(t).
-\label{SDE}
+\\ \\
+When one values stocks, it is more reasonable to look at the relative change in price rather then the actual level of the price, i.e. $dS(t)/S(t)$ rather then $S(t)$. The contributions to the relative change, also known as the return, consists of a deterministic term $\mu dt$ - a drift term containing the average growth of the asset price, $\mu$, and a non-deterministic term $\sigma dW$ containing the volatility measuring the standard deviation of the returns, $\sigma$.
+\begin{equation} \label{eq2}
+    \frac{dS(t)}{S(t)} = \mu dt + +\sigma dW^o(t).
 \end{equation}
-Again, here $dW(t)$ is the normally distributed random variable as stated above. (Another incentive/reason to evaluate the returns rather then the level is that they tend to increase exponentially by observation.)
-\\
-$\mu$ and $\sigma$ can both be functions of $S$ and $t$. The most basic model is taking $\mu$ and $\sigma$ to be constants. The unique solution to \eqref{SDE} is (Ito's Lemma appendix?)
+$dW^o(t)$ is a standard Brownian motion under the "real-world" measurement $P_o$ (What this entails we will get back to in \ref{sec:2.5}. (Empirically, this also seems reasonable as price tend to increase expnentially.)
+\\ \\
+$\mu$ and $\sigma$ can both be functions of $S$ and $t$. The most basic model is taking $\mu$ and $\sigma$ to be constants. A solution to \eqref{eq2} is (Ito's Lemma appendix?)
 \begin{equation}
-    S(t) = S(0)\exp((\mu - \frac{1}{2}\sigma^2)t + \sigma W(t))
+    S(t) = S(0)e^{(\mu - \frac{1}{2}\sigma^2)t + \sigma W(t)}.
 \end{equation}
-from which one can obtain the result
-\begin{equation}
-    \ln\Big(\frac{S(t)}{S(0)}\Big) \sim N((\mu-\frac{1}{2}\sigma^2)t, \sqrt{t}).
-\end{equation}
-(Using this one can estimate the parameters using the historical logarithmic returns by the following.
-\begin{align}
-    r_i &= \log\big(\frac{S_{i+1}}{S_i}\big)\\
-    m &= \frac{1}{n dt} \sum_{i = 0}^{n-1} r_i\\
-    \hat{\sigma} &= \frac{1}{(n-1) dt} \sum_{i = 0}^{n-1} (r_i - m)^2\\
-    \hat{\mu} &= m + \frac{1}{2}\hat{\sigma}^2)
-\end{align}
 
-(Argue more why lognormal random walk is reasonable? Says something about interest rates, how it also can be modelled as a stochastic variable, maybe not okay to assume its constant, depends on lifespan of option. )
-
-\subsection{Derivatives}
-Derivatives are instruments where the value is derived from or rely upon an underlying asset (or a group of assets) such as the financial assets stated above or interest rates. (It is a contract between two or more parties.) Examples of derivatives are options, futures, forwards and  swaps. This thesis will (focus on) valuing options.
-\\
-And option is a contract between two parties that gives the holder of the option the right but not the obligation to buy or sell the underlying asset at a specified time and at a specified price called the exercise (or strike) price, in the future. As stated the purchaser of the option is the holder of the option, while the seller is the writer. An option in which the holder has the right to buy the underlying is called a call option, and an option in which the holder has the right to sell the underlying is called a put option. Then there are several types of call and put options. American options for example can be exercised at any time up until expiry, while the one which will be examined(?) further in this thesis is the European option which can only be exercised at expiry. The payoff function for a European call option at expiry $T$ is
+\section{Derivatives}
+Derivatives are instruments where the value is derived from or rely upon an underlying asset (or a group of assets) such as financial assets or interest rates. (It is a contract between two or more parties.) Examples of derivatives are options, futures, forwards and swaps. This thesis will (focus on) valuing options.
+\\ \\
+And option is a contract between two parties that gives the holder of the option the right but not the obligation to buy or sell the underlying asset at a specified time and at a specified price called the exercise (or strike) price, in the future. As stated the purchaser of the option is the holder of the option, while the seller is the writer. An option in which the holder has the right to \textit{buy} the underlying is called a \textit{call} option, and an option in which the holder has the right to \textit{sell} the underlying is called a \textit{put} option. There are (also) several types of call and put options. American options can be exercised at any time up until expiry, while the one which will be examined(?) further in this thesis is the European option which can only be exercised at expiry. The payoff function for a If $C$ is the price of a call option, $E$ is exercise price and $S$ is the underlying stock price, the European call option at expiry $T$ is
 \begin{equation}
     C(S,T) = max(S(T)-E, 0).
 \end{equation}
-$E$ is the exercise price. Similarly, the payoff function for a European put option is
+Similarly, if $P$ is the price of a put option, the payoff function for a European put option is
 \begin{equation}
     P(S,T) = max(E-S(T), 0).
 \end{equation}
 
-What affects the value of an option? 
-The value of an option is dependent on the underlying asset price and the time to expiry (for obvious reasons) which both will change during the life of the option. In addition, the value of the option will be affected by the exercise price - e.g. the higher the exercise price of a call option, the higher the value of the option - and the interest rate. The interest rate affects the price through time value as the payoff will be received in the future. Lastly, the volatility will have an  effect on the option value(measures the fluctuation, annualised standard dedviation of the returns).
-Using a 
-Assets, stocks, derivatives, arbitrage
-(Risk neutrality, ricing derivatives in a risk-neutral world)
-\\Volatility:\\
-Volatility is the standard deviations of the logarithmic returns, so it might be viewed as a measurement of how random the asset price is(?). There are several ways of modelling the volatility. E.g.
+The value of an option is dependent on the underlying asset price and the time to expiry (for obvious reasons) which both changes during the life of the option. In addition, the value of the option will be affected by the exercise price and the interest rate. The higher the exercise price of a call option, the higher the value of the option. The interest rate affects the price through time value as the payoff will be received in the future. Lastly, the volatility will have an effect on the option value (measures the fluctuation, annualized standard deviation of the returns). (How?)
+
+\section{Risk-Neutral Pricing}
+Risk can be interpreted(?) as the variance of the return - how much the price deviates from the expected price(?). There are two types of risk, namely specific and non-specific risk.
+The former is risk associated with the specific asset/company and can be minimized by diversification(building a portfolio with negatively correlated assets). The latter is risk associated with factors influencing the whole market and can be reduced by hedging(taking opposite positions in similar derivatives which gives less return and less non-specific risk). 
+Looking at the risk-neutral case means that investor's risk preferences are irrelevant as all (non-specific) risk can be hedged away. There is no profit to be made above the risk free return. This relies on the existence of a self-financing strategy - in a complete market, an underlying asset can be perfectly replicated, hence the price (of the derivative) is just the lowest initial investment needed to replicate the asset. (?) (Practically this means that we replace the rate of growth by the risk free rate for all random walks which means that even though investors may disagree on the rate of growth, they will value options the same.)
+\\
+The money market account, $\beta(t)$, may be described as an asset such as \eqref{eq2} with drift equal to the risk-free rate and volatility equal to zero. 
+\begin{equation*}
+    \frac{d\beta(t)}{\beta(t)} = r dt
+\end{equation*}
+where $r$ is the risk-free rate, which has solution $\beta(t) = e^{rt}$ if $\beta(0) = 1$. $\beta(t)$ is attainable(appendix) and $\beta(t)/Z(t)$ is a positive martingale(appendix) for some stochastic discount factor(appendix?), $Z(t)$, of the market (why? positive since $\beta$ and $Z$ are positive and initial value is 1). Any such martingale defines a change in probability measure. I. e. for a fixed interval $[0, T]$, $\beta(t)/Z(t)$ defines the new probability measure $P_beta$ such that 
+\begin{equation}
+    \Big(\frac{dP_{\beta}}{dP_o}\Big)_t = \frac{\beta(t)}{Z(t)}, \qquad 0\leq t \leq T.
+\end{equation}
+$P_{\beta}$ is the risk-neutral measure and is equivalent (martingale) measure(appendix) to $P_o$, the "real-world" measure. In practice, this means we replace the standard Browninan motion $dW^o(t)$ under $P_o$ by a Brownian motion $dW(t)$ under $P_{\beta}$ such that 
+\begin{equation*}
+    dW(t) = dW^o(t) + \nu (t) dt
+\end{equation*}
+with $\nu$ satisfying $\mu = r + \sigma \nu$.
+
+\section{Volatility}
+Volatility is the standard deviations of the logarithmic returns, so it might be viewed as a measurement of how random the asset price is(?). There are several ways of modelling the volatility.
 \begin{itemize}
-  \item As a stochastic differential equation. This is a very reasonable model as the volatility seems to have a random component just as our asset price model. Then one would have two stochasstic differential equations
+  \item As a stochastic differential equation. This is a very reasonable model as the volatility seems to have a random component just as our asset price model. Then one would have two stochastic differential equations
   \begin{align}
     dS(t) &= \mu S(t) dt + \sqrt{\nu (t)} S(t) dW_1(t) \\
     d \nu (t) &= \alpha(\nu, t) dt + \beta(\nu, t) dW_2(t)
   \end{align}
-  $dW_1(t)$ and $dW_2(t)$ are two Wiener processes(which may be correlated?). 
-  \item Historical volatility uses historical values to calculate some parameter estimation for the voltility based on statistics. (This may be the maximum likelihood e.g.). In this paper $\hat{\sigma}$ has been used. A question that arises for the use of the historical volatility is how much historical data one should use in the calculations.
-  \item Implied volatility uses the quoted prices for options today and exploiting the idea that the market "knows" the volatility. When one has today's option price, asset price, life span of option, risk free rate and strike pricec one can solve the Black Scholes formula(which will be discussed in more detail later) backwards to find the implied volatility.
+  where $dW_1(t)$ and $dW_2(t)$ are two Wiener processes(which may be correlated?). 
+  \item Historical volatility uses historical values to calculate some parameter estimation for the volatility based on statistics. (This may be the maximum likelihood e.g.). (In this paper $\hat{\sigma}$ has been used.) A question that arises for the use of the historical volatility is how much historical data one should include in the calculations.
+  \item Implied volatility uses the quoted prices for options today and exploiting the idea that the market "knows" the volatility. When one has today's option price, asset price, life span of option, risk free rate and strike price one can solve the Black Scholes formula (which will be discussed in chapter 4, source) backwards to find the implied volatility.
 \end{itemize}
-Risk neutrality:
-\\
-Risk can be interpreted(?) as the variance of the return - how much the price deviates from the expected price(?). There are two types of risk, namely specific and non-specific risk.
-The former is risk associated with the specific asset/company and can be minimised by diversification(building a portfolio with negatively correlated assets). The latter is risk associated with factors influencing the whole market and can be reduced by hedging(taking opposite psoitions in similar derivatives which gives less return and less non-specific risk). 
-Looking at the risk-neutral case means that investor's risk preferances are irrelevant as all (non-specific) risk can be hedged away. There is no profit to be made above the risk free return. Practically this means that we replace the rate of growth by the risk free rate for all random walks which means that eventhough investors may disagree on the rate of growth, they will value options the same.
-\chapter{Monte Carlo}
 
-\chapter{The Black-Scholes Model}
-When deriving the Black Scholes formula, one makes the following assuptions
+\chapter{Monte Carlo Simulation}
+Monte Carlo simulation is a way of randomly simulating a stochastic process such as that of eqref 2.5. More abouot this. (Principles of Derivative Pricing?)\\
+Monte Carlo simulation is useful(other word) when
 \begin{itemize}
-  \item The underlying asset follows a lognormal random walk.
-  \item The risk free rate, $r$ and volatility $\sigma$ are known functions of time.( This is not a very realistic assumption as both $r$ and $\sigma$ also are stochastic. There are methods that also model them as stochastic differential equations.)
+    \item[- ] if the price dynamics are such that numerically solving the PDE (describing it) is difficult or does not exist
+    \item[- ] the price depend on the paths of the underlying asset. 
+    \item[- ] the number of underlying assets are large(maybe even just larger than three)
+\end{itemize}
+For a general stochastic differential equation as that given by \eqref{eq1}, the Euler discretization scheme (\cite{glasserman_04}  p. 340) for a time grid $0 = t_0 < t_1 < \ldots < t_m$, where  $\hat{X}$ a time-discretized approximation to $X$, $\hat{X}(0) = X(0)$ and for $i = 0, \ldots, m-1$, is given by
+\begin{equation}
+  \hat{X}(t_{i+1}) = \hat{X}(t_i) + u(\hat{X}(t_i))[t_{i+1}-t_i] + w(\hat{X}(t_i))\sqrt{t_{i+1}-t_i}Z_{i+1}
+  \label{eq:3.1}
+\end{equation}
+$Z_i$ independent one-dimensional standard normal random numbers(/vectors). For the random walk of stock returns given in \eqref{eq2} this is then
+\begin{equation}
+  \hat{X}(t_{i+1}) = \hat{X}(t_i) + \mu\hat{X}(t_i)[t_{i+1}-t_i] + \sigma\hat{X}(t_i)\sqrt{t_{i+1}-t_i}Z_{i+1}.
+  \label{eq:3.2}
+\end{equation}
+From \eqref{eq3} one can obtain that
+\begin{equation}
+    \ln\Big(\frac{S(t)}{S(0)}\Big) \sim N((\mu-\frac{1}{2}\sigma^2)t, \sqrt{t}).
+\end{equation}
+Using this the parameters can be estimated using the historical logarithmic returns by the following.
+\begin{align}
+    r_i &= \log\big(\frac{S_{i+1}}{S_i}\big)\\
+    m &= \frac{1}{n dt} \sum_{i = 0}^{n-1} r_i\\
+    \hat{\sigma} &= \frac{1}{(n-1) dt} \sum_{i = 0}^{n-1} (r_i - m)^2\\
+    \hat{\mu} &= m + \frac{1}{2}\hat{\sigma}^2
+\end{align}
+In figure something the random walk of \eqref{eq:3.2} something was implemented for a company stock and N paths were simulated. The figure also shows the true stock price.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=120mm]{MC_100_simulations.png}
+    \caption{Simulation of 100 random walks over 90 days with time step = $0.1$.}
+    \label{plot:3.1}
+\end{figure}
+
+The Euler scheme described in \eqref{eq:3.1} has strong convergence of order $1/2$. I.e. 
+\begin{equation*}
+    E\Big[||X(0)-\hat{X}(0)||^2 \Big] \leq \kappa \sqrt{h}
+\end{equation*}
+and 
+\begin{equation*}
+    ||u(x,s) - u(x,t)|| + ||w(x, s) - w(x, t)|| \leq \kappa (1 + ||x||) \sqrt{|t-s|}
+\end{equation*}
+for some constant $\kappa$. (proven in Kloeden and Platen, p.  342-344?)
+\\
+Valuing eqref(stock price SDE) under the risk-neutral measure $P_{\beta}$ we would obtain the same solution as that of the Black-Scholes formula derived in chapter \ref{sec:4}.\\
+%Produce convergence plot?
+
+\chapter{The Black-Scholes Model} \label{sec:4}
+\section{Assumptions}
+(Black and Scholes(1973) reference)
+The Black-Scholes formula is a mathematical formula used to calculate a theoretical value for the option price at any point up until expiry using the input parameters underlying asset price, strike price, time until expiry, volatility of underlying and current risk free rate. (However, it can also be used for solving for expected volatility, interest rates, expected dividends.) When deriving the Black-Scholes formula, the following assumptions are made:
+\begin{itemize}
+  \item The underlying asset follows a lognormal random walk. (This means)/I.e. the logarithmic returns are normally distributed.
+  \item The risk free rate, $r$ and volatility $\sigma$ are known (and constant/functions of time).( This is not a very realistic assumption as $r$ and $\sigma$ seem to be stochastic reference. There are methods that also model them as stochastic differential equations.)
   \item There are no transaction costs for trading the underlying assets. (Also not a realistic assumption. Also exists models that take this into account.)
-  \item Delta hedging is possible - underlying can be traded continously and one can buy and sell any number(not nessecarely an integer) of the underlying
-  \item There are no arbitrage oportunities.
+  \item Delta hedging is possible - underlying can be traded continuously and one can buy and sell any number(not necessarily an integer) of the underlying
+  \item There are no arbitrage opportunities.
   \item There are no dividends paid out by underlying asset during the life of the option. (This can be adjusted for if one knows when and how much dividend will be paid out in advance.)
 \end{itemize}
-It is reasonable to assume the optionvalue which will be denoted by $V$ is a funciton of time, $t$, (even more specific, time to expiry, $T-t$) and the underlying asset $S$.
-Consider the following portfolio, $\Pi$
+
+\section{The Black-Scholes Partial Differential Equation}
+It is reasonable to assume the option value which will be denoted by $V$ is a function of time, $t$, (even more specific, time to expiry, $T-t$) and the underlying asset $S$. Assuming that $S$ follows a lognormal random walk (eqref), then by Ito's Lemma(see Appendix)
+\begin{equation}
+  dV = \frac{\partial V}{\partial S} dS + \frac{\partial V}{\partial t} dt + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} dt.
+  \label{BS_dV}
+\end{equation}
+(The random walk of V)
+Now, consider the following portfolio, $\Pi$, consisting of such an option and an arbitrary quantity $-\Delta$ of the underlying asset.  
 \begin{equation}
   \Pi = V(S,t) - \Delta S
 \end{equation}
-where $\Delta$ is some quantity of the underlying asset, called the delta. Next we want to consider a infinitessimal change of the portfolio for some time interval $(t, t+dt)$. 
-We assume that $S$ follows a lognormal random walk (eqref). By Itô's Lemma 
-\begin{equation}
-  dV = \frac{\partial V}{\partial S} dS + \frac{\partial V}{\partial t} dt + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} dt.
-\end{equation}
-Hence we obtain the following expression for $d\Pi$ 
+($\Delta$ is also called the delta.) Next we want to consider a infinitesimal change of the portfolio for some time interval $(t, t+dt)$. By \eqref{BS_dV} and eqref(lognormal random walk) and eqref(portfolio)
 \begin{equation}
   d\Pi = \Big(\mu S \frac{\partial V}{\partial S} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + \frac{\partial V}{\partial t} -\mu \Delta S \Big) dt + \sigma S \Big(\frac{\partial V}{\partial S} -\Delta \Big)dW.
 \end{equation} 
-By chosing $\Delta = \frac{\partial V}{\partial S}$ we eliminate the random/stochastic term and thereby eliminate the risk connected to the randomness(?). This is called delta hedging and is a dynamic hedging strategy. 
-Our remaining epression for $d\Pi$ is
+By choosing $\Delta = \frac{\partial V}{\partial S}$ we eliminate the random term and thereby the risk(?). This is called delta hedging and is a dynamic hedging strategy. 
+Our remaining expression for $d\Pi$ is
 \begin{equation}
   d\Pi  = \Big(\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}\Big) dt
 \end{equation} 
-and thus completely deterministic. As mentioned, this is a riskless portfolio and the change in value of the portfolio should therefore correspond to the amount we would get on return from a risk-free account (by the assumption  of no arbitrage). I.e.
+and thus completely deterministic. As mentioned, this is a risk less portfolio and the change in value of the portfolio should therefore correspond to the amount we would get on return from a risk-free account (by the assumption  of no arbitrage). I.e.
 \begin{align}
   d\Pi &= r\Pi dt \\
   \Big(\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 + \frac{\partial^2 V}{\partial S^2}\Big) dt &= r\Big(V - \Delta S \Big) dt
 \end{align}
-From the latter we obtain the Black Scholes partial differential equation
+From the latter we obtain the Black-Scholes partial differential equation
 \begin{equation}
-  \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} \ rS\frac{\partial V}{\partial S} -rV = 0. 
+  \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} \ rS\frac{\partial V}{\partial S} - rV = 0. 
   \label{BS}
 \end{equation}
-In order to solve \eqref{BS} we need some boundary and final conditions.(opposite of inital conditions). For a european call otpion, this would be
-\begin{align}
-  &V(S, T) = max(S(T)-E ,0) \\
-  &V(0, t) = 0 \\
-  &V(S, t) = S \text{ as S } \rightarrow \infty
-\end{align}
-This leads to the following closed form solution for European call options.
+for $S > 0$  and  $0\leq t \leq T$.
+(T being time until expiry.)
+
+\section{The Black Scholes Formula for European Options}
+For European options, by applying appropriate boundary and final conditions we can obtain a closed form solution for the option price. Using the put-call parity, one can obtain the solution for a put option from an existing solution of a call option and the other way around. Hence, consider first a European call option. 
+\\
+If, at expiry, $E>S(T)$ it would be reasonable to go through with the option and one would make a profit of $E-S(T)$. If $E\leq S$, the option's value would be zero. Hence, the final condition should be
 \begin{equation}
-  V(S, t) = S N(d_1) - E e^{-r(T-t)} N(d_2)
+    V(S, T) = \max(E-S(T) ,0), 
+\end{equation}
+also called the payoff function.
+\\
+Now, consider the case when $S=0$. Then \eqref{BS} would reduce to
+\begin{equation}
+    \frac{\partial V}{\partial t} - rV = 0.
+\end{equation}
+Solving the reduced equation using the final condition and realizing that the put option is worthless as $S\rightarrow\infty$, we obtain the boundary conditions
+\begin{align}
+    &V(0, t) = Ee^{-r(T-t)} \\
+    &V(S, t) = 0 \text{ as S } \rightarrow \infty
+\end{align}
+This leads to the following closed form solution for European put options.
+\begin{equation}
+  V(S, t) = E e^{-r(T-t)} N(-d_2) - S N(-d_1)
 \end{equation}
 $N(\cdot)$ is the cumulative normal distribution and
 \begin{align}
@@ -248,22 +316,97 @@ $N(\cdot)$ is the cumulative normal distribution and
   d_2 &= \frac{\log(S/E)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}}
 \end{align}
 
-\chapter{Artificial Neural Networks}
-\section{Deep Feedforward Networks}
-Multilayer perceptrons (MLPs) are a type of deep feedforward networks. It is called feedforward because the input $\textbf{x}$ floats forward through the network to finally produce an output $\textbf{y}$. The goal of the network is to approximate some function $f$ so that $\textbf{y} = f(\textbf{x})$. It does so by defining a mapping $\textbf{y} = f^*(\textbf{x}; \theta)$ for which it optimizes the parameters $\theta$ by learning/training. 
-\\ \\
-(Difference between linear perceptron and mulitlayer  non-linear activation function. Why can it approximate non-linear functions?)
-\\ \\
-The network is deep if it consists of two or more hidden layers. Hidden layers are classified by being between the input and the output layer. Each layer in the network defines an activation function $w$ and initializes weights $W_{ij}$ for each node and a bias $b^{(i)}$. 
-If the number of hidden layers is $n$, this is called the depth of the network, the number of nodes in each hidden layer is $m_i$ for $i = 1, ..., n$, this is called the width of the network and $\textbf{x} \in \mathbb{R}^d$, $W^(1) \in \mathbb{R}^{m_1 \times d}$, $W^(i) \in \mathbb{R}^{m_i \times m_{i-1}}$ for $i = 2, \hdots n$, $b^{(i)} \in \mathbb{R}$ for $i = 1, \hdots n$ then the process in vector notation would look like
+Next, we can as mentioned use the put-call parity, combining underlying asset and an identical put and a call option in a portfolio in such a way that we always expect to get a return $E$, and then solve for the call option to obtain the closed form solution for a European call option.
+\begin{equation}
+  V(S, t) = S N(d_1) - E e^{-r(T-t)} N(d_2) 
+\end{equation}
 
-\begin{align*}
-    &\textbf{h}^{(1)}  = w(b^{(1)}+W^{(1)}\textbf{x}) \\
-    &\textbf{h}^{(2)}  = w(b^{(2)}+W^{(2)}\textbf{h}^{(1)}) \\
-    &      \vdots  \\
-    &\textbf{h}^{(n)}  = w(b^{(n)}+W^{(n)}\textbf{h}^{(n-1)}) \\
-    &\textbf{y} = w^{(out)}(b^{(out)} + \textbf{\text{w}}^{\text{T}}\textbf{h}^{(n)})
-\end{align*}
+\begin{figure}
+    \centering
+    \subfloat[Call option.]{\includegraphics[width=0.5\textwidth]{call_option_BS.png}\label{fig:f1}}
+  \hfill
+  \subfloat[Flower two.]{\includegraphics[width=0.5\textwidth]{put_option_BS.png}\label{fig:f2}}
+  \caption{Put Option.}
+\end{figure}
+
+In fig.. the values of \ref{tab:BSvalues} were set for the parameters in eqref BS and solved as a function of the underlying asset price $S$ ($\in [0, 50]$) in addition to the payoff function eqref.
+\begin{table}[] \label{table:1}
+    \centering
+    \caption{Some caption}
+    \begin{tabular}{c c}
+        Parameter & Value  \\
+        \hline
+        $\sigma$ & $0.2$  \\
+        $r$ & $0.02$ \\
+        $E$ & $30$ \\
+        $T$ & $90$ days \\
+    \end{tabular}
+    %\caption{Caption}
+    \label{tab:BSvalues}
+\end{table}
+
+\chapter{Artificial Neural Networks}
+Artificial Neural Networks are loosely inspired by the biological neural network in the brain an how it processes information, thereby the name. McCulloch and Pitts (1943) \cite{McCulloch_43} were the first who tried to represent the brain of a mammal through an artificial neural network represented by basic brain cells they called neurons.
+\\ \\
+Rosenblatt (1958) \cite{Rosenblatt_58} a bit later introduced the perceptron built up of linear threshold units(LTUs). An LTU sums over weighted inputs and applies the step function which outputs $1$ if the sum is larger than some threshold and $0$ if it is below. An LTU is illustrated in figure \ref{perceptron}. The perceptron is then constricted by an input layer, a layer of LTUs connected to all the inputs and produces an output vector containing only binary values. However, the perceptron was restricted. Later, the neocognitron was introduced by Fukushima (1980) \cite{Fukushima_80}, a hierarchical multilayer neural network - what motivated for further work on multilayer perceptrons.
+
+\begin{figure}
+\begin{tikzpicture}[
+  init/.style={
+    draw,
+    circle,
+    inner sep=2pt,
+    font=\Huge,
+    join = by -latex
+  },
+  squa/.style={
+    draw,
+    inner sep=2pt,
+    font=\Large,
+    join = by -latex
+  },
+  start chain=2,node distance=13mm
+  ]
+  \node[on chain=2] 
+    (x2) {$x_2$};
+  \node[on chain=2,join=by o-latex] 
+    {$w_2$};
+  \node[on chain=2,init] (sigma) 
+    {$\displaystyle\Sigma$};
+  \node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activate \\ function}}]   
+    {$f$};
+  \node[on chain=2,label=above:Output,join=by -latex] 
+    {$y$};
+  \begin{scope}[start chain=1]
+  \node[on chain=1] at (0,1.5cm) 
+    (x1) {$x_1$};
+  \node[on chain=1,join=by o-latex] 
+    (w1) {$w_1$};
+  \end{scope}
+  \begin{scope}[start chain=3]
+  \node[on chain=3] at (0,-1.5cm) 
+    (x3) {$x_3$};
+  \node[on chain=3,label=below:Weights,join=by o-latex] 
+    (w3) {$w_3$};
+  \end{scope}
+  \node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
+  
+  \draw[-latex] (w1) -- (sigma);
+  \draw[-latex] (w3) -- (sigma);
+  \draw[o-latex] (b) -- (sigma);
+  
+  \draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (x3.south west);
+  \end{tikzpicture}
+  \caption{An LTU with input of dimension three.}
+  \label{perceptron}
+\end{figure}
+
+\section{Multilayer Perceptron}
+Multilayer perceptrons (MLPs) are networks consisting of multiple layers with neurons. The first layer is an input layer, the last layer is an output layer and the layer between are called hidden layers. The network is deep if it consists of two or more hidden layers. 
+\\ \\
+MLPs are a type of deep feedforward networks. Feedforward neural networks are the most essential deep learning models.  It is called feedforward because it is a directed acyclic graph built up of chain structures (where the lengths of the chain structure determines the depth of the network) and the input $\textbf{x}$ floats \textit{forward} through the network to finally produce an output $\textbf{y}$. The goal of the network is to approximate some function $\textbf{y} = f^*(\textbf{x})$ by defining a mapping $\textbf{y} = f(\textbf{x}; \theta)$ and learning the parameters $\theta$ that best fit $f^*$.
+\\ \\
+It is constructed similar to a perceptron, consisting of an input layer with an input vector and a bias term usually initialized to zero. The input layer is connected to the first hidden layer such that every unit in the hidden layer is connected to every input unit. The difference from the perceptron is in the nonlinear \textit{activation function}. Where the perceptron would use a binary step function, the MLP units can use a wide range of activation functions producing a real-valued output which it passes on to units in the next layer. The process continues like this until it reaches the output layer. 
 
 %Fiks følgende figur
 \begin{figure}
@@ -307,96 +450,515 @@ net/.style={
   \draw[->] (mat-\ai-2) -- (mat-6-3);
 \draw[->] (mat-6-3) -- node[above] {Ouput} +(2cm,0);
 \end{tikzpicture}
-
-\begin{tikzpicture}[
-init/.style={
-  draw,
-  circle,
-  inner sep=2pt,
-  font=\Huge,
-  join = by -latex
-},
-squa/.style={
-  draw,
-  inner sep=2pt,
-  font=\Large,
-  join = by -latex
-},
-start chain=2,node distance=13mm
-]
-\node[on chain=2] 
-  (x2) {$x_2$};
-\node[on chain=2,join=by o-latex] 
-  {$w_2$};
-\node[on chain=2,init] (sigma) 
-  {$\displaystyle\Sigma$};
-\node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activate \\ function}}]   
-  {$f$};
-\node[on chain=2,label=above:Output,join=by -latex] 
-  {$y$};
-\begin{scope}[start chain=1]
-\node[on chain=1] at (0,1.5cm) 
-  (x1) {$x_1$};
-\node[on chain=1,join=by o-latex] 
-  (w1) {$w_1$};
-\end{scope}
-\begin{scope}[start chain=3]
-\node[on chain=3] at (0,-1.5cm) 
-  (x3) {$x_3$};
-\node[on chain=3,label=below:Weights,join=by o-latex] 
-  (w3) {$w_3$};
-\end{scope}
-\node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
-
-\draw[-latex] (w1) -- (sigma);
-\draw[-latex] (w3) -- (sigma);
-\draw[o-latex] (b) -- (sigma);
-
-\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (x3.south west);
-\end{tikzpicture}
-\caption{Feedforward neural network}
+\caption{Illustration of a MLP with input dimension of five, a single dimension output and one hidden layer with three neurons.}
 \end{figure}
 
 \subsection{Activation function} 
-Different choices for activation functions are the sigmoid function 
+The reason for using activation functions is the nonlinear element, namely the possibility to solve nonlinear functions. If all the activation functions were linear, one simply has multiple linear regression. An activation function also gives a restriction on the outputs of the neurons. This can be useful if one wants to squeeze the output in to a range. In addition it increases training stability(source?). Different layers can have different activation functions. The choice of activation function is closely related to the choice of cost function is discussed in section \ref{cost}. Common choices for activation functions follow.
+
+\subsubsection*{Sigmoid}
+The sigmoid function restricts the output between $0$ and $1$.
 \begin{equation*}
-    f(z) = \frac{1}{1+e^{-z}},
+    f(z) = \frac{1}{1+e^{-z}}
 \end{equation*}
-hyperbolic tangent, tanh,
+It has a defined gradient for the whole domain and might be especially useful where the output is a probability.
+
+\subsubsection*{Hyperbolic Tangent}
+The hyperbolic tangent activation function is quite similar to sigmoid, but restricts the output between $-1$ and $1$.
 \begin{equation*}
-    f(z) = \frac{1+e^{-2z}}{1-e^{-2z}},
+    f(z) = \frac{1+e^{-2z}}{1-e^{-2z}}
 \end{equation*}
-rectified linear units, ReLU,
+
+\subsubsection*{Rectified Linear Units (ReLU)}
+ReLU restricts the output to have a positive value, (but it's variations may produce a small positive value for negative values of the input as well.)
 \begin{equation*}
     f(z) = max(0,z),
 \end{equation*}
-softplus,
+
+\subsubsection*{Exponential Linear Unit (ELU)}
+ELU is quite similar to ReLU, but outputs small values also for negative input values.
+  \[
+    f(z) = 
+     \begin{cases} 
+      \alpha(e^x -1) & \text{if } x < 0 \\
+      x       & \text{if } x \geq 0
+     \end{cases}
+   \]
+(Is said to converge cost function faster to produce more accurate results(than ReLU?).)
+
+\subsubsection*{Softplus}
+Softplus only outputs positive values and is very similar to ReLU, but has a softer transition around $z=0$.
 \begin{equation*}
     f(z) = \ln(1+e^z)
 \end{equation*}
-and several others. (ReLU have become especially popular as of lately and is used for all convolutional networks.)
 
-\section{Gradient-Based Training}
+\subsubsection*{Softsign}
+Is quite similar to the hyperbolic tangent, but converges polynomially rather than exponentially. 
+\begin{equation}
+  f(z) = \frac{z}{1+|z|}
+\end{equation}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=120mm]{Activation_functions.png}
+    \caption{Plots of the sigmoid, softplus, softsign and ELU activation functions.}
+    \label{plot1}
+\end{figure}
+%\\ \\
+In the 1980s, the sigmoid activation function was very popular as it performed well on small neural networks. One avoided the use of rectified linear units until as late as the early 2000s because of its undefined derivative. But Jarrett et al. (2009) \cite{Jarrett_09} observed that the use of rectiefied nonlinearity was the most important factor of improvement among several other factors that they examined. (The use of rectified linear units also connects the artificial neural networks closer to their biological inspiration as biological neurons operate quite similar, most of them being inactive(sparse activation) and some having output the same order as their input.) For this reason, ReLU and its variations(Leaky ReLU, PReLU) has had increased popularity as of recently.
+
+\subsection{Cost function} \label{cost}
+The cost function is a performance measure for the neural network and what is actually optimized with respect to the parameters $\theta$. Important properties of the cost function is to have large and predictable enough gradients (for them to serve as a good guide). However, if activation functions saturates for some values, the cost function tends to saturate as well. Hence, why the combination of activation functions and cost functions should be chosen with care. (Happens for instance with sigmoid for very large positive or negative values.) Another problem that occurs in deep neural networks is the cost functions one usually evaluates become non-convex, i.e. they are harder to optimize as we might not find a global minimum, but merely just a very low value. We therefore use iterative and stochastic gradient-based optimizers. They do not have any global convergence guarantee and may be sensitive to initial values. The weights are (usually) initialized to small random values and the bias to small positive values or even zero. Common choices for regression tasks follow(?).
+
+\subsubsection*{Mean Absolute Error, MAE}
+\begin{equation}
+    J(\theta) = \frac{1}{n}\sum_{i=1}^n |y_i-f(x_i; \theta)|
+\end{equation}
+\subsubsection*{Mean Squared Error, MSE}
+\begin{equation}
+      J(\theta) = \frac{1}{n}\sum_{i=1}^n (y_i-f(x_i; \theta))^2
+\end{equation}
+\subsubsection*{Root Mean Squared Error, RMSE}
+\begin{equation}
+      J(\theta) = \sqrt{\frac{1}{n}\sum_{i=1}^n (y_i-f(x_i; \theta))^2}
+\end{equation}
+
 \subsection{Backpropagation}
-In order to train the model, one needs to specify a cost function to minimise. This cost function often involves a cross-entropy between the training data and the predicted data(?) and a regularising term (penalising complex models to avoid overfitting). (write more about cost function?).
+In order to minimize the cost function, the gradient of the model has to be calculated. This is done using the backpropagation algorithm. The backpropagation algorithm was popularized and first used on multilayer neural networks by Rumelhart et al. (1986) \cite{rumelhart_86} (Previous to this, the algortihm has been described and used by others(Linnainmaa, 1970,1976)..?)
+\\ \\
+The backpropagation algorithm consists of two parts, the forward pass and the backward pass. 
+
+\subsubsection*{Forward Pass}
+In the forward pass, the training samples are propagated forward through the network, calculating the output of each neuron in a layer using \eqref{eq:6.4.1} and passing forward to the next layers to produce the output. 
+\\ \\
+Let $\textbf{x} \in \mathbb{R}^d$, $y \in \mathbb{R}$, $b^{(l)} \in \mathbb{R}$ for $l = 1, \hdots, n$ and $w_l$ be the activation function of layer $l$. In addition, let  $W^{(1)} \in \mathbb{R}^{m_1 \times d}$, $W^{(l)} \in \mathbb{R}^{m_l \times m_{l-1}}$ for $l = 2, \hdots n$ be the matrices such that element $W_{ij}^l$ is the weight from node $j$ in layer $(l-1)$ to node $i$ in layer $l$. The the forward pass is
+
+\begin{align*}
+    &\textbf{h}^{(1)}  = w_1(b^{(1)}+W^{(1)}\textbf{x}) \\
+    &\textbf{h}^{(2)}  = w_2(b^{(2)}+W^{(2)}\textbf{h}^{(1)}) \\
+    &      \vdots  \\
+    &\textbf{h}^{(n)}  = w_n(b^{(n)}+W^{(n)}\textbf{h}^{(n-1)}) \\
+    &y = w^{(out)}(b^{(out)} + \textbf{\text{w}}^{\text{T}}\textbf{h}^{(n)})
+\end{align*}
+
+The algorithm is presented in Algorithm \ref{alg:forward}.
+
+\subsubsection*{Backward Pass}
+The goal of the backpropagation algorithm is to calculate the gradient of the cost function with respect to any weight or bias in the network, 
+\begin{equation}
+        \frac{\partial J}{\partial W_{ij}^{(l)}}, \quad \frac{\partial J}{\partial b^{(l)}}
+\end{equation}
+It does so by starting with the output layer. Let $\mathbold{\delta}^{(n)}$ be such that
+\begin{equation*}
+    \mathbold{\delta}^{(n)} = \nabla _h J \circ w'(\mathbold{z}^{(n)})
+\end{equation*}
+where 
+\begin{equation}
+    \textbf{z}^{(l)} = W^{(l)}\textbf{h}^{(l-1)}+b^{l}
+\end{equation}
+and $\nabla_h$ is the partial derivative with respect to each node in the output layer, $\partial/\partial h_j^{n}$. ($\delta^{(l)}$ thus has the same dimension as output layer.)
+\\ \\
+Next, $\mathbold{\delta}^{(l)}$ is calculated for layer $l$ given $\mathbold{\delta}^{(l+1)}$ for layer $(l+1)$,
+\begin{equation*}
+    \mathbold{\delta}^{(l)} = \Big((W^{(l)})^T \mathbold{\delta}^{(l+1)}\Big) \circ w'(\mathbold{z}^{(l)}).
+\end{equation*}
+Finally, we obtain the equations for the gradients,
+\begin{align}
+    \frac{\partial J}{\partial W_{ij}^{(l)}} &= h_{j}^{(l-1)}\delta_{i}^{(l)} \\
+    \frac{\partial J}{\partial b^{(l)}} &= \mathbold{\delta}^{(l)}
+\end{align}
+The backward pass starts by calculating $\mathbold{\delta}^{(n)}$ for the output layer and iterates backward through the layers using eqref and eqref. Finally, the gradient is obtained by equation eqref and eqref. \\ \\
+
+\begin{algorithm}[H] \label{alg:forward}
+  \SetAlgoLined
+    \caption{Forward Pass}
+  \BlankLine
+ \For{$k=1$ to $m_1$}{
+    $z_k^{(1)} = \sum_{j=1}^d W_{jk}^{(1)}x_{ij}$ \\
+    $h_k^{(1)} = w_1(z_k^{(1)})$
+ }
+ \For{$l=2$ to $n$}{
+    \For{$k = 1$ to $m_l$}{
+        $z_k^{(l)} = \sum_{j=1}^{m_{l-1}} W_{jk}^{(l)} h_{j}^{(l-1)}$ \\
+        $h_k^{(l)} = w_l(z_k^{(1)})$
+    }
+ }
+\end{algorithm}
+%\\ \\
+\begin{algorithm}[H] \label{alg:backward}
+  \SetAlgoLined
+    \caption{Backward Pass}
+  \BlankLine
+    \For{$j=1$ to $m_n$}{
+        $\delta_j^{(n)} = \frac{\partial J}{\partial h_j^{(n)}}  w'(z_j^{n})$ \\
+        $\frac{\partial J_i}{\partial W_{jk}^{(n)} } = \delta_j^{(n)} h_k^{(n-1)}$
+    }
+    \For{$l = n-1$ to $1$}{
+        \For{$j=1$ to $m_l$}{
+            $\delta_j^{(l)} = w'(z_j^{(l)})\sum_{k=1}^{m_{l+1}} \delta_k^{(l+1)}W_{jk}^{(l+1)}$ \\
+            $\frac{\partial J_i}{\partial W_{jk}^{(l)}} = \delta_j^{(l)} h_k^{(l-1)}$
+        }
+    }
+\end{algorithm}
+
+\subsection{Optimization}
+The parameters in the MLP are updated using some version of gradient descent(Appendix?). There are many different popular optimizers that are based on(?) gradient descent. In this section, the Adam algorithm will be presented by first introducing Stochastic Gradient Descent.
+
+\subsection*{Stochastic Gradient Descent}
+Stochastic gradient descent is a type of gradient descent, but instead of computing the exact gradient using the whole training set in each iteration, it divides the training set into non-overlapping, (roughly) equal subset called batches and computes an approximate gradient on the batches which it iterates over. This way, it is possible to obtain an unbiased estimator of the gradient as we average over a batch of identically independently distributed (data-generated) distributions. The stochastic gradient descent relies upon a hyperparameter - a parameter that is not decided by the algorithm, but has to be chosen in another way. That is the learning rate with which each update is made. Typically, this parameter needs to decrease in each iteration because the gradient estimate includes some noise that does not vanish at the minimum(the true gradient becomes zero at minimum). The algorithm is presented in Algorithm \ref{Alg:SDG}. \\ \\
+\begin{algorithm}[H] \label{Alg:SDG}
+  \SetAlgoLined
+    \caption{Stochastic Gradient Descent}
+  \BlankLine
+ \KwData{Set of learning rates for each iteration, $\epsilon_k$}
+ initialize weights $\mathbold{\theta}$ \\
+ $k \leftarrow 1$\\
+ \While{stopping criterion not met}{
+  sample minibatch of size $m$, input \{$\textbf{x}_1, \hdots , \textbf{x}_m$\} with corresponding output \{$y_1, \hdots, y_m$\}\\
+  compute gradient: $g \leftarrow \frac{1}{m} \nabla _{\mathbold{\theta}} \sum_{i=1} ^m J(f(\textbf{x}_i; \mathbold{\theta}), y_i)$ \\
+  update $\mathbold{\theta}$: $\mathbold{\theta} \leftarrow \mathbold{\theta} - \epsilon_k g$
+  }
+\end{algorithm} 
+%\\ \\
+Sufficient guarantee of convergence is
+\begin{equation*}
+    \sum_{k=1}^{\infty} \epsilon_k = \infty \quad \text{ and } \quad \sum_{k=1}^{\infty} \epsilon_k^2 < \infty
+\end{equation*}
+with common choice being to decrease $\epsilon_k$ linearly until some iteration, $\tau$,
+\begin{equation}
+    \epsilon_k = (1-\alpha)\epsilon_0 + \alpha \epsilon_{\tau}, \qquad \alpha = \frac{k}{\tau}.
+\end{equation}
+where after $\tau$, $\epsilon_k$ is left constant. This requires to decide the parameters $\epsilon_0$, $\tau$ and $\epsilon_{\tau}$. (Usually $\epsilon_{\tau} \approx 0.01\epsilon_0$). ($\epsilon_0$ too large $\implies$ large oscillations, increasing cost function. $\epsilon_0$ too large $\implies$ slow learning, stuck at high cost value. Typically, optimal $\epsilon_0$ is higher than the initial learning rate that gives the best performance after first 100 iterations). Computation time per iteration does not grow with size of training set. 
+
+\subsection*{Stochastic Gradient Descent with Momentum}
+The stochastic gradient descent is a very basic optimizer for neural networks, however learning can be slow. A refinement is the stochastic gradient descent with momentum. (Accelerate learning for high curvature, small consistent or noisy gradients.) It moves in the direction of a accumulated average of past gradients and contains a hyperparameter, $\alpha$, that determines how fast the previous gradients decay. The larger $\alpha$ compared to $\epsilon$, the more previous gradients determines the direction. Larger step size if many successive gradients have the same direction. \\ \\
+The momentum can be viewed/interpreted in the physical sense. If the position of a particle at any time is $\mathbold{\theta}(t)$, then the net force is 
+\begin{align*}
+    \textbf{f}(t) = \frac{\partial^2 \mathbold{\theta}(t)}{\partial t^2}
+\end{align*}
+which, by introducing $\textbf{v}(t)$, can be decomposed to
+\begin{align} \label{eq:5.2}
+    \textbf{f}(t) &= \frac{\partial \textbf{v}(t)}{\partial t} \\
+    \textbf{v}(t) &= \frac{\partial \mathbold{\theta}(t)}{\partial t} \label{eq:5.3}
+\end{align}
+where $\textbf{v}(t)$ can be interpreted as the velocity. \eqref{eq:5.2} and \eqref{eq:5.3} can be solved numerically, the easiest solver being Euler. The two forces are proportional to the gradient of the cost function such that it always moves in direction of the negative direction of the gradient, and a force that can be thought of as a viscous drag that makes the particle to a local minimum, proportional to $-\mathbf{v}(t)$. Stochastic gradient descent with momentum is presented in Algorithm \ref{Alg:SDGm}.
+%(Write more about initialization in master thesis?)
+\\ \\
+\begin{algorithm}[H] \label{Alg:SDGm}
+  \SetAlgoLined
+    \caption{Stochastic Gradient Descent with Momentum}
+  \BlankLine
+ \KwData{learning rate, $\epsilon$}
+ \KwData{momentum parameter, $\alpha$}
+ initialize weights $\mathbold{\theta}$ \\
+ initialize velocity $\mathbold{v}$\\
+ \While{stopping criterion not met}{
+  sample minibatch of size $m$, input \{$\textbf{x}_1, \hdots , \textbf{x}_m$\} with corresponding output \{$y_1, \hdots, y_m$\}\\
+  compute gradient: $g \leftarrow \frac{1}{m} \nabla _{\mathbold{\theta}} \sum_{i=1} ^m J(f(\textbf{x}_i; \mathbold{\theta}), y_i)$ \\
+  compute velocity update: $\mathbold{v} \leftarrow \alpha \mathbold{v}-\epsilon g$ \\
+  update $\mathbold{\theta}$: $\mathbold{\theta} \leftarrow \mathbold{\theta} + \mathbold{v}$
+  }
+\end{algorithm}
+
+\subsection*{Adam}
+Even though Stochastic Gradient Descent with momentum performs better than just Stochastic Gradient Descent, there is still a hyperparameter that needs to be decided. Adam, short for adaptive moments, is an algorithm with an adaptive learning rate. It first computes a first- and second-order moment for which it secondly performs a bias correction to account for the initialization made at $0$. The algorithm is presented in Algorithm \ref{Alg:Adam}. \\ \\
+
+\begin{algorithm}[H] \label{Alg:Adam}
+  \SetAlgoLined
+    \caption{Adam}
+  \BlankLine
+ \KwData{step size, $\epsilon$ (default: $0.001$)}
+ \KwData{exponential decay rates for momentum, $\rho_1$, $\rho_2$ $\in [0, 1)$ (default: $0.9$,  $0.999$)}
+ \KwData{small constant $\delta$ for numerical stabilization (default: $10^{-8}$)}
+ initialize weights $\mathbold{\theta}$ \\
+ initialize first and second momentum: $\textbf{s}=0$, $\textbf{r}=0$\\
+ $t\leftarrow 0$ \\
+ \While{stopping criterion not met}{
+  sample minibatch of size $m$, input \{$\textbf{x}_1, \hdots , \textbf{x}_m$\} with corresponding output \{$y_1, \hdots, y_m$\}\\
+  compute gradient: $\textbf{g} \leftarrow \frac{1}{m} \nabla _{\mathbold{\theta}} \sum_{i=1} ^m J(f(\textbf{x}_i; \mathbold{\theta}), y_i)$ \\
+  $t\leftarrow t+1$ \\
+  update first biased momentum:  $\textbf{s} \leftarrow \rho_1 \textbf{s} + (1-\rho_1)\textbf{g}$ \\
+  update second biased momentum:  $\textbf{r} \leftarrow \rho_2 \textbf{r} + (1-\rho_2)\textbf{g} \circ \textbf{g}$ \\
+  correct first biased momentum: $\hat{\textbf{s}} \leftarrow \frac{\textbf{s}}{1-\rho_1^t}$ \\
+  correct second biased momentum: $\hat{\textbf{r}} \leftarrow \frac{\textbf{r}}{1-\rho_2^t}$ \\
+  compute update: $\Delta \mathbold{\theta} = -\epsilon \frac{\hat{\textbf{s}}}{\sqrt{\hat{\textbf{r}}}+\delta}$ \\
+  update: $\mathbold{\theta} \leftarrow \mathbold{\theta} +\Delta \mathbold{\theta}$
+  }
+\end{algorithm}
+
+\section{Generalization}
+The Universal Approximation Theorem first presented by Cybenko (1989) \cite{Cybenko_89} showed that any function that is continous on a closed and bounded set of $\mathbb{R}$ can be represented by a single hidden layer feedforward network with the sigmoid activation function and a linear output. Hornik et al. (1991) \cite{Hornik_91} then showed that this is true for a wide range of activation functions. However, we do not know the number of neurons needed and have no guarantee for the ability of our network to learn this representation. Generalization is the ability the model has to predict unobserved data. Empirically, by Bengio et al., 2006 \cite{Bengio_06} and other (Erhan et al., 2009; Bengio, 2009;Mesnil et al., 2011; Ciresan et al., 2012; Krizhevsky et al., 2012; Sermanet et al.,2013; Farabet et al., 2013; Couprie et al., 2013; Kahou et al., 2013; Goodfellowet al., 2014d; Szegedy et al., 2014a), the more layers we add, the better is the generalization of the neural network and the less neurons are needed. To observe how well our model generalizes, it is common to divide the data set into a training and a test set. The training set is used to train the model and the test set is used to measure the error for unobserved data. If the training error is not sufficiently low, we have what is called underfitting, or high \textit{bias}. If the training error is sufficiently low, but the gap between the training and test error is high, we have overfitting, or high \textit{variance}. Overfitting occurs from sensitivity to small deviations in the data often causing the network to model noise. In deciding on a network architecture, we encounter the bias-variance tradeoff problem. Increased number of hidden units will increase variance and decrease bias causing overfitting, while too few hidden units may lead to underfitting. There are several ways of approaching this problem. (A common approach in machine learning) is the use of cross-validation.
+\\ \\
+In cross-validation, the training data is split into two subsets, one set to train our model, confusingly enough often called training set, and one validation set to test the generalization error. This can be done in several ways depending on the size of the data. In k-fold cross validation, the data is randomly split into k folds of roughly equal size. For each iteration, $(k-1)$ samples are used as training data and one sample is held out as validation data for which a validation error is estimated to test the model. This is done $k$ times such that each fold is held out exactly once. Then an average of the validation errors is calculated and used as an estimate of the error.  In this way, we get a good estimate of how well the model performs on unobserved data (or how well it predicts). Thus this might be a good pointer for which neural network architecture to choose. The k-fold cross validation algorithm is presented in Algorithm \ref{Alg:kfold}. The choice of network architecture is also though, a lot of trail and error.
+\\ \\
+\begin{algorithm}[H] \label{Alg:kfold}
+  \SetAlgoLined
+    \caption{k-fold cross validation}
+  \BlankLine
+    \KwData{training data, $\mathbb{D}$, such that element $i$ in $\mathbb{D}$ is the input, target pair $(\textbf{x}^{(i)}, y^{(i)})$}
+    \KwData{a learning algorithm, $A$}
+    \KwData{a loss function, $L$}
+    \KwData{number of folds, $k$}
+    Split $\mathbb{D}$ into $k$ mutually exclusive subsets(such that $\bigcup_{i=1}^{k} \mathbb{D}_{i} = \mathbb{D}$) \\
+    \For{$i$ from $1$ to $k$}{
+    $A_i = A(\mathbb{D}/\mathbb{D}_i)$ \\
+        \For{$(\textbf{x}^{(j)}, y^{(j)})$ in $\mathbb{D}_i$}{
+        $e_j = L(A_i(\mathbold{x}^{(j)}),  y^{(j)})$
+        }
+    }
+    Return $\mathbold{e}$
+\end{algorithm}
+
+
+\section{Model Setup}
+\subsection{Data Calibration}
+Hutchinson et. al(1994) \cite{hutchinson_94} made the first attempt to solve option pricing using an MLP on both Monte Carlo simulated underlying stock price for option prices as well as real S\&P 500 futures and options using only two input parameters, namely time to maturity $(T-t)$ and the moneyness - the ratio between the underlying stock price and the strike price, $S/E$. The output was the ration between the option price and the strike price, $C/E$. Reducing the number of input parameters reduces the complexity of the model and necessity for more hidden units. In addition, normalized input data to the same order of magnitude also reduces the complexity of the model as the weight updates are proportional to the input data(source?). Hutchinson et al. (1994) \cite{hutchinson_94} argued for the use of only two input parameters by Theorem 8.9 of Merton (1990) (source!!!) where it is stated that the option pricing formula is homogeneous of degree one in stock price per share and strike price \eqref{homogeneity}. Garcia and Gencay (2000) \cite{Gencay_00} also showed the use of this assumption in feedforward neural networks greatly improves performance. The authors of Hutchinson et al. (1994) \cite{hutchinson_94} (also) argued that with the assumption that the volatility and the risk-free rate is constant during the life of the option, this will not be picked up by the model. However, this is one of the limitations of the Black-Scholes formula, and providing the model with some measure of the latter two would be useful. For further work, it has been suggested(Fogarasi(2004) \cite{fogarasi_04}) to start out with a lower number of input variables which one increases to achieve more accuracy. This was done (for example) by Amilon (2003) \cite{amilon}, using a total of nine input variables, including 10- and 30-days historical volatilities as well as lagged prices of the underlying stock.
+\begin{equation}
+    C = f(S, E, t;T) \implies \frac{C}{E} = f(\frac{S}{E}, 1, t;T)
+    \label{homogeneity}
+\end{equation}
+\eqref{homogeneity} showes the homogeneity assumption for option price $C$, exercise price $E$, stock price $S$ and time to maturity $T$. \\ \\
+In this paper, there is four input parameters - volatility, moneyness, exercise price and risk free rate. The underlying stock prices was collected from 150 different companies on the S\&P 500 using Alpha Vantage \cite{vantage}. Then the strike price, volatility, time to expiry and risk free rate was set in the following way.
+
+\begin{itemize}
+  \item[ -] Start price, $S_0$ for the option was set to the price at the start of the option for $150$ different companies.
+  \item[ -] Exercise price ratio, $E_r$ was first drawn from a uniform probability distribution $E_r \sim U(0.5, 1.5)$ with a sample size of $10$. For each stock price, 10 different exercise prices, $E$ were then calculated by multiplying exercise ratio with the terminal stock price, $S(T)$, for each company. 
+  In this way, all exercise ratios $E_r < 1$ will make options expiring out of the money, while exercise ratios $E_r > 1$ will expire in the money and exercise ratios $E_r = 1$ will expire at the money. 
+  \item[ -] The annualized risk free rate, $r$ was drawn from a uniform probability distribution $r \sim U(0.015, 0.025)$ with a sample size of $100$.
+  \item[ -] The time to maturity, $T$ was set to $92$ days $\approx$ $3$ months for all the options and was annualized for $252$ trading days per annum.
+  \item[ -] The annualized volatility, $\hat{\sigma}$, was calculated using $1$ year of historical data prior to the start of the option.
+\end{itemize}
+The input data, $X$, is then structured on the following form
+\[
+X
+=
+\left[
+  \begin{array}{c}
+    \textbf{x}_{1} \\
+    \textbf{x}_{2} \\
+    \vdots \\
+    \textbf{x}_{N} \\  
+  \end{array}
+\right]
+\]
+such that for $i=1, \ldots, 150$, $j = 1, \ldots, 100$ and $k = 1, \dots, 10$
+
+\begin{equation}
+  \textbf{x}_{k + 10j + 10\cdot100\cdot i} = [\sigma_i, \frac{S_i(0)}{E_{r,j}}, r_k, T].
+\end{equation}
+
+Hence, there are $N=150 000$( and $X$ has dimension $150 000\times 4$).
+The remaining output $\textbf{y}$ is then calculated as
+\begin{equation}
+  y_{k + 10j + 10\cdot100\cdot i} = \frac{e^{-r_k T}}{E_{r,j}} \max \Big(S_i(T)-E_{r,j}, 0\Big)
+\end{equation}
+(and has dimension $150 000\times 1$).
+
+\subsection{Network Architecture}
+In Hutchinson et al. (1994) \cite{hutchinson_94}, the authors experimented with three different neural networks - Radial Basis Functions(RBFs), Projection Pursuit Regression(PPR) and MLP, discovering that MLP performed best. In combination with it's straightforward configuration, this most likely motivated the further research on the use of MLP to solve Option Pricing. Anders et al. (1996) \cite{anders_96}, Gencay and Salih(2003) \cite{gencay_03} and Yao et al. (2000) \cite{yao_00} mainly focused on the use of MLP, but used small and shallow networks. Hutchinson et al. (1994) \cite{hutchinson_94} used a one hidden layer network with 4 hidden units and 2 inputs. Benell and Sutcliff(2004) \cite{bennell_04} experimentet with one hidden layer with 3-5 hidden units and 3-7 inputs. Anders et al. (1996) \cite{anders_96} experimented with a sparse network(not all units are connected) with one hidden layer, 3 hidden units and 4 inputs. They all still achieved good performance, hence one would expect that a deeper and wider network would do even better. This belief is also supported by studies on better generalization with deeper networks(Bengio et el. (2006) \cite{Bengio_06}) and by today's computer power it is possible to get results for networks with several hundred hidden units and tens of layers in reasonable time. 
+\\ \\
+(In this paper, it has been experimented with an architecture consisting of $20-100$ units per layer for $3-6$ layers.) The network has been implemented using Keras \cite{keras}.
 \\
-In order to minimise the cost function, the gradient of the model has to be calculated. This is done using the backpropagation algorithm. 
-
-\subsection{Stochastic Gradient Descent}
-Write about the different loss functions, optimisers, activation functions, dropout rate and other regularising techniques. Argument about choice made.
-
-(Define input and output of the neural network, why are these reasonable?)
 
 
+\chapter{Results and Analysis}
+
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:my_label}
+\begin{center}
+\subcaption{sfsdsdf}
+\begin{tabular}{|l l|}
+    \hline
+    Property & Value \\
+    \hline \hline
+    Batch size & $32$\\
+    Epochs & $100$\\
+    Optimizer & Adam\\
+    Loss Function & MSE\\
+    Training size &  $95 999$ \\
+    Validation size & $24 000$\\
+    Test size & $30 001$\\
+    \hline
+\end{tabular}
+\bigskip
+\subcaption{asd}
+\begin{tabular}{|c c c l|}
+    \hline
+    Layer & No. Neurons & No. Trainable Parameters & Activation Function \\
+    \hline \hline
+    1 & 100 & 500 & ELU\\
+    2 & 80 & 8080 & ELU\\
+    3 & 60 & 4860 & ELU\\
+    4 & 40 & 2440 & ELU\\
+    5 & 20 & 820 & Softplus\\
+    6 & 1 & 21 & \\
+    \hline
+\end{tabular}
+\bigskip
+\subcaption{Chose softplus because only takes positive values}
+\begin{tabular}{|l|c c c|}
+    \hline
+     & RMSE & MSE & MAE \\
+    \hline \hline
+    Training data & 0.026871 & 0.000722 & 0.014593 \\
+    Test data & 0.027366 & 0.000749 & 0.014796 \\
+    \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:my_label}
+\begin{center}
+\subcaption{sfsdsdf}
+\begin{tabular}{|l l|}
+    \hline
+    Property & Value \\
+    \hline \hline
+    Batch size & $128$\\
+    Epochs & $100$\\
+    Optimizer & Adam\\
+    Loss Function & MSE\\
+    Training size &  $95 999$ \\
+    Validation size & $24 000$\\
+    Test size & $30 001$\\
+    \hline
+\end{tabular}
+\bigskip
+\subcaption{asd}
+\begin{tabular}{|c c c l|}
+    \hline
+    Layer & No. Neurons & No. Trainable Parameters & Activation Function \\
+    \hline \hline
+    1 & 100 & 500 & ELU\\
+    2 & 80 & 8080 & ELU\\
+    3 & 60 & 4860 & ELU\\
+    4 & 40 & 2440 & ELU\\
+    5 & 20 & 820 & Softplus\\
+    6 & 1 & 21 & \\
+    \hline
+\end{tabular}
+\bigskip
+\subcaption{Chose softplus because only takes positive values}
+\begin{tabular}{|l|c c c|}
+    \hline
+     & RMSE & MSE & MAE \\
+    \hline \hline
+    Training data & 0.028390 & 0.000806 & 0.015940 \\
+    Test data & 0.027876 & 0.000777 & 0.015806 \\
+    \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \subfloat[Training loss for batch size of $32$.]{\includegraphics[width=0.5\textwidth]{loss_mlp_32.png}\label{loss_mlp_32}}
+  \hfill
+  \subfloat[Training loss for batch size of $128$.]{\includegraphics[width=0.5\textwidth]{loss_mlp_128.png}\label{loss_mlp_128}}
+  \caption{}
+\end{figure}
+
+\begin{table}[H]
+    \caption{The tables show RMSE, MSE and MAE performance for Black-Scholes(BS), Monte Carlo simulation(MC) and multilayer perceptron(MLP) for training data and test data. In addition, in table c), the whole data set is divided into out-of-the-money(OTM), in-the-money(ITM) and near-the-money(NTM) if the moneyness is respectively $S(T)/E < 0.98$, $S(T)/E > 1.02$ and $ < S(T)/E $}
+    \label{tab:my_label}
+\begin{center}
+\subcaption{some caption}
+\begin{tabular}{|l l l l|c|}
+\hline
+Model & RMSE & MSE & MAE & Observations \\
+\hline
+\hline
+BS      &  &  & & \\
+MC      &  &  &  & $119 999$\\
+MLP     &  $0.028396$ & $0.000806$ & $0.015998$ & \\
+\hline
+%\lasthline
+%\caption{Training data}
+\end{tabular}
+\bigskip
+\subcaption{some}
+\begin{tabular}{|l l l l|c|}
+\hline
+Model & RMSE & MSE & MAE & Observations \\
+\hline \hline
+BS      &  &  & & \\
+MC      &  &  & & $30 001$\\
+MLP     &  $0.028149$ & $0.000792$ & $0.015915$ & \\
+\hline
+%\caption{Test data}
+\end{tabular}
+\bigskip
+\subcaption{skfja}
+\begin{tabular}{|l l l l l|c|}
+    \hline
+    & Model & RMSE & MSE & MAE & Observations \\
+    \hline \hline
+    \multirow{OTM} & BS & l & l & l &  \\
+    & MC & l & l & l & 90957\\
+    & MLP & 0.000163 & 0.012775 & 0.005892 & \\
+    \hline
+    \multirow{ITM} & BS & l & l & l &  \\
+    & MC & l & l & l & 58116\\
+    & MLP & 0.001609 & 0.040110 & 0.028274 & \\
+    \hline
+    \multirow{NTM} & BS & l & l & l &  \\
+    & MC & l & l & l & 927\\
+    & MLP & 0.00834 & 0.028886 & 0.017241 & \\
+    \hline
+%\caption{Whole data set divided by moneyness}
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}
+    \centering
+    \subfloat[Predicted moneyness plotted against true moneyness using Black-Scholes.]{\includegraphics[width=0.5\textwidth]{truevspred_BS.png}\label{truevspres_BS}}
+  \hfill
+  \subfloat[Predicted moneyness plotted against true moneyness using Monte Carlo.]{\includegraphics[width=0.5\textwidth]{truevspred_MC.png}\label{truevspred_MC}}
+  \caption{}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Predicted moneyness plotted against true moneyness using MLP for training data.]{\includegraphics[width=0.5\textwidth]{truevspred_mlp_train.png}\label{truevspres_train_mlp}}
+  \hfill
+  \subfloat[Predicted moneyness plotted against true moneyness using MLP for test data.]{\includegraphics[width=0.5\textwidth]{truevspred_mlp_test.png}\label{truevspred_test_mlp}}
+  \caption{}
+\end{figure}
+By figure \ref{truevspres_BS} adn \ref{truevspred_MC}, the Black-Scholes formula clearly overprices options (especially higher valued options) and the Monte Carlo simulations underprices(especially higher valued options). (The overpricing Black-Scholes is consistent with the findings in (?)). In figure \ref{truevspred_test_mlp} and \ref{truevspres_train_mlp}, one can see the neural network is more equally spread around the true values in addition to the spread being smaller than for BS and MC. The values from  table.. confirmes the smaller spread with lower error values. 
+
+
+Improvements:\\
+For further work, I think it would be interesting to look at more realistic data. In this paper, real underlying stock data was used, then standard pricing rules were applied to calculate option prices, but maybe it would be possible to use even more realistic option pricing rules, look at how the the options are actually quoted(?). Or use real option price data. Also, evaluating performance of options with different maturities. 
+\\ \\
+To look at performance, it could be informative to also look at the delta hedging performance as done by e.g. Hutchinson et al. (1994) \cite{hutchinson_94}, Anders et al. (1996) \cite{anders_96} and to evaluate other performance measures such as $R^2$. 
+\\ \\
+In this paper, the dividend yield for the stock prices was not included in the Black-Scholes formula and Monte Carlo simulations. This might explain the underpricing of the Monte Carlo simulations as it is based on the expected returns based on historical returns which might have been underestimated if dividend was paid out during the period for which the expected return was calculated. This might also have infected the calculation of the historical volatility. The dividend was ignored for simplicity as there was selected $150$ different companies from the S\&P 500 that might all have different dividend policies. However, including this could improve the performance of Black-Scholes and Monte Carlo. 
+\\ \\
+Several improvements could also have been done for the multilayer perceptron. For instance, there was no regularization applied such as early stopping, setting a dropout rate or L1/L2 regularization. One could also experiment more with the architecture, use of optimizer and default settings for hyperparameters, activation functions, batch size and number of epochs. One could also experiment with input parameters as done by e.g. Amilon (2003) \cite{amilon}, with more volatility parameters based on different sized historical data, implied volatility, lagged values of the stock price or different measures of the time to maturity if the data set contained options with different maturities. \\ \\
+In this paper, only European call options were evaluated, but it would be interesting to see how a neural network performed on other types of options such as American with free boundary values or path-dependent Asian options, and compare to existing pricing models.
+\\ \\
+Weaknesses of BS and MC?
+
+\chapter{Conclusion}
 
 % Bibliografi/referanseliste skal komme før appendiks
-\bibliography{kurs}
+%\bibliography{kurs}
+%\bibliographystyle{plain}
+%\bibliographystyle{unsrt}
+%\bibliography{sample.bib}
+\bibliography{sample}{}
 \bibliographystyle{plain}
-
+\nocite{*}
 % En latex-kommando for å si fra at kapitlene/seksjonene fra nå 
 % av skal nummereres med store bokstaver:
 \appendix
-
+\section*{Appendix}
+\subsection*{Random Walk}
+\subsection*{Itô's Lemma}
 %\input{appendiks}
 
 % Indeks for rapporten. Ta bort prosenttegn hvis du vil ha det med.

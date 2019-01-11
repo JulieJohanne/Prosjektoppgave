@@ -7,6 +7,20 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty
@@ -24,8 +38,6 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
@@ -162,16 +174,45 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsthm.s
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsthm.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\fixmath.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\fixmath.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\relsize\relsize.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\relsize\relsize.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT Prosjektoppgave.aux
 INPUT Prosjektoppgave.aux
 OUTPUT Prosjektoppgave.aux
@@ -179,42 +220,36 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
+OUTPUT Prosjektoppgave.out
+OUTPUT Prosjektoppgave.pdf
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm2074.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1440.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\eccc1440.tfm
-OUTPUT Prosjektoppgave.pdf
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm2488.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx2488.tfm
+OUTPUT Prosjektoppgave.toc
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecsl1095.tfm
 INPUT Prosjektoppgave.toc
-INPUT Prosjektoppgave.toc
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1095.tfm
+OUTPUT Prosjektoppgave.toc
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx2074.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
@@ -230,20 +265,27 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.f
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-OUTPUT Prosjektoppgave.toc
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecsl1095.tfm
-INPUT Prosjektoppgave.toc
-INPUT Prosjektoppgave.toc
-OUTPUT Prosjektoppgave.toc
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx2074.tfm
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1440.tfm
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT MC_100_simulations.png
+INPUT .\MC_100_simulations.png
+INPUT .\MC_100_simulations.png
+INPUT .\MC_100_simulations.png
+INPUT .\MC_100_simulations.png
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0600.tfm
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx0800.tfm
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx0600.tfm
+INPUT call_option_BS.png
+INPUT .\call_option_BS.png
+INPUT .\call_option_BS.png
+INPUT .\call_option_BS.png
+INPUT .\call_option_BS.png
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0900.tfm
+INPUT put_option_BS.png
+INPUT .\put_option_BS.png
+INPUT .\put_option_BS.png
+INPUT .\put_option_BS.png
+INPUT .\put_option_BS.png
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
@@ -273,9 +315,82 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx0800.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx0600.tfm
+INPUT Activation_functions.png
+INPUT .\Activation_functions.png
+INPUT .\Activation_functions.png
+INPUT .\Activation_functions.png
+INPUT .\Activation_functions.png
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmib10.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib8.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx6.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbi1095.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti0800.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbi0800.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti0600.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbi0600.tfm
+INPUT loss_mlp_32.png
+INPUT .\loss_mlp_32.png
+INPUT .\loss_mlp_32.png
+INPUT .\loss_mlp_32.png
+INPUT .\loss_mlp_32.png
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib9.tfm
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT loss_mlp_128.png
+INPUT .\loss_mlp_128.png
+INPUT .\loss_mlp_128.png
+INPUT .\loss_mlp_128.png
+INPUT .\loss_mlp_128.png
+INPUT truevspred_BS.png
+INPUT .\truevspred_BS.png
+INPUT .\truevspred_BS.png
+INPUT .\truevspred_BS.png
+INPUT .\truevspred_BS.png
+INPUT truevspred_MC.png
+INPUT .\truevspred_MC.png
+INPUT .\truevspred_MC.png
+INPUT .\truevspred_MC.png
+INPUT .\truevspred_MC.png
+INPUT truevspred_mlp_train.png
+INPUT .\truevspred_mlp_train.png
+INPUT .\truevspred_mlp_train.png
+INPUT .\truevspred_mlp_train.png
+INPUT .\truevspred_mlp_train.png
+INPUT truevspred_mlp_test.png
+INPUT .\truevspred_mlp_test.png
+INPUT .\truevspred_mlp_test.png
+INPUT .\truevspred_mlp_test.png
+INPUT .\truevspred_mlp_test.png
 INPUT Prosjektoppgave.aux
+INPUT .\Prosjektoppgave.out
+INPUT .\Prosjektoppgave.out
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
@@ -286,8 +401,6 @@ INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
-INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
-INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk
@@ -296,6 +409,8 @@ INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk
 INPUT C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
@@ -306,14 +421,18 @@ INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfon
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmib10.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmib10.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb

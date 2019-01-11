@@ -5,7 +5,7 @@ import os
 
 
 #directory = 'C:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave'
-data = np.loadtxt('stock_data_150_5.txt')
+data = np.loadtxt('stock_data.txt')
 
 """"
 # Look at historical volatility by splitting time periods
@@ -41,20 +41,20 @@ plt.show()
 """
 
 #Genreate input and output data
-size_exercise_ratio, size_risk_free_rate = 10, 100
+size_exercise_ratio, size_risk_free_rate = 100, 10
 exercise_ratio = np.random.uniform(low=0.5, high=1.5, size=size_exercise_ratio)
 risk_free_rate = np.random.uniform(low=0.015, high=0.025, size=size_risk_free_rate)
-time_to_expiry = 62  # 3 months
+time_to_expiry = 92  # 3 months
 X = np.empty((0, 5), float)  # np.zeros((size_exercise_ratio*size_risk_free_rate*len(data[:,0])**3, 5))
-Y = np.array([])  # np.zeros(size_exercise_ratio*size_risk_free_rate*len(data[:,0])**3)
+Y = np.empty((0, 2), float)  # np.array([]) # np.zeros(size_exercise_ratio*size_risk_free_rate*len(data[:,0])**3)
 for company in np.arange(len(data[:, 0])):
     exercise_price = exercise_ratio * data[company, -1]
-    _, volatility = sp.parameter_estimation(data[company, (-time_to_expiry-365):(-time_to_expiry)])
+    _, volatility = sp.parameter_estimation(data[company, (-time_to_expiry-252):(-time_to_expiry)])
     initial_price = data[company, -time_to_expiry]
     for i, r in enumerate(risk_free_rate):
         for j, E in enumerate(exercise_price):
-            Y = np.append(Y, (sp.true_option_price(data[company, -time_to_expiry:], E, r)))
+            Y = np.vstack([Y, [(sp.true_option_price(data[company, (-time_to_expiry):], E, r)), data[company, -1:]/E]])
             X = np.vstack([X, [volatility, initial_price, E, r, time_to_expiry]])
 
-np.savetxt('output_150.txt', Y)
-np.savetxt('input_150.txt', X)
+np.savetxt('output_w_moneyness.txt', Y)
+np.savetxt('input_w_moneyness.txt', X)

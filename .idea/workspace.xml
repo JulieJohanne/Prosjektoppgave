@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b3d7587-b165-445a-bc5d-84bbfabb6ed0" name="Default Changelist" comment="" />
+    <list default="true" id="7b3d7587-b165-445a-bc5d-84bbfabb6ed0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.fls" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.log" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.sty" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prosjektoppgave.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Prosjektoppgave.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company_keys_150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/company_keys_long.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_alpha_vantage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_company_keys.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_data_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monte_carlo_black_scholes.py" beforeDir="false" afterPath="$PROJECT_DIR$/monte_carlo_black_scholes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/montecarlo_normal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate_stock_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulate_stock_price.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stock_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_data_150_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testX.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_time_loop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_time_permutation.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,39 +41,50 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Prosjektoppgave$generate_data_new.coverage" NAME="generate_data_new Coverage Results" MODIFIED="1543930274165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Prosjektoppgave$main.coverage" NAME="main Coverage Results" MODIFIED="1545137722541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Prosjektoppgave$monte_carlo_black_scholes.coverage" NAME="monte_carlo_black_scholes Coverage Results" MODIFIED="1546856434364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1621100688">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.48" value="2" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.77" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="py" value="15" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="generate_data_new" value="441" />
+          <entry key="Python Console" value="54" />
+          <entry key="generate_data" value="51" />
+          <entry key="generate_data_new" value="451" />
+          <entry key="main" value="127" />
+          <entry key="monte_carlo_black_scholes" value="259" />
           <entry key="neural_network" value="55" />
-          <entry key="py" value="2615" />
+          <entry key="py" value="8124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3111" />
+          <entry key="Python" value="9121" />
         </counts>
       </usages-collector>
     </session>
@@ -50,10 +92,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_alpha_vantage.py">
+        <entry file="file://$PROJECT_DIR$/generate_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="90">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_data_alpha_vantage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -62,15 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_company_keys.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generate_data.py">
+        <entry file="file://$PROJECT_DIR$/simulate_stock_price.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+            <state relative-caret-position="105">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -79,13 +128,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simulate_stock_price.py">
+        <entry file="file://$PROJECT_DIR$/neural_network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="131">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding>
+                <element signature="e#22#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/monte_carlo_black_scholes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_w_moneyness.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6681">
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="137" selection-start-column="137" selection-end-column="137" />
             </state>
           </provider>
         </entry>
@@ -99,9 +190,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/data_alpha_vantage.py" />
-        <option value="$PROJECT_DIR$/simulate_stock_price.py" />
         <option value="$PROJECT_DIR$/generate_data_new.py" />
         <option value="$PROJECT_DIR$/neural_network.py" />
+        <option value="$PROJECT_DIR$/generate_data.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/simulate_stock_price.py" />
+        <option value="$PROJECT_DIR$/monte_carlo_black_scholes.py" />
       </list>
     </option>
   </component>
@@ -112,10 +206,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="564" />
-    <option name="y" value="225" />
-    <option name="width" value="1101" />
-    <option name="height" value="744" />
+    <option name="x" value="30" />
+    <option name="y" value="-36" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -155,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.neural_network">
+  <component name="RunManager" selected="Python.monte_carlo_black_scholes">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Prosjektoppgave" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,6 +272,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="generate_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Prosjektoppgave" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generate_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="generate_data_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Prosjektoppgave" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,6 +305,44 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generate_data_new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Prosjektoppgave" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="monte_carlo_black_scholes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Prosjektoppgave" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monte_carlo_black_scholes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -225,9 +376,15 @@
     <list>
       <item itemvalue="Python.generate_data_new" />
       <item itemvalue="Python.neural_network" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.monte_carlo_black_scholes" />
+      <item itemvalue="Python.generate_data" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.monte_carlo_black_scholes" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.generate_data" />
         <item itemvalue="Python.neural_network" />
         <item itemvalue="Python.generate_data_new" />
       </list>
@@ -248,14 +405,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20080972" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21700405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39679715" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3950178" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -264,14 +422,14 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3291815" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.47864768" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.35409254" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.8634812" visible="true" weight="0.21295546" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.90082645" visible="true" weight="0.24210526" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" order="6" sideWeight="0.13651878" side_tool="true" visible="true" weight="0.21295546" />
+      <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" order="6" sideWeight="0.09917355" side_tool="true" visible="true" weight="0.24210526" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -285,9 +443,30 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_data_new.py" />
+    <entry file="file://$PROJECT_DIR$/generate_data_old.py" />
+    <entry file="file://$PROJECT_DIR$/montecarlo_normal.py" />
+    <entry file="file://$PROJECT_DIR$/generate_company_keys.py" />
+    <entry file="file://$PROJECT_DIR$/test_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="137" selection-start-column="137" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_w_moneyness.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_w_moneyness.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6681">
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_alpha_vantage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="51">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
@@ -295,31 +474,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simulate_stock_price.py">
+    <entry file="file://$PROJECT_DIR$/generate_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural_network.py">
+    <entry file="file://$PROJECT_DIR$/get_data_alpha_vantage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="175">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_data_new.py" />
-    <entry file="file://$PROJECT_DIR$/generate_company_keys.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_data.py">
+    <entry file="file://$PROJECT_DIR$/neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <state relative-caret-position="131">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="e#22#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="144" column="14" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulate_stock_price.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monte_carlo_black_scholes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

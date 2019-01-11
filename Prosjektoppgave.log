@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.13)  15 DEC 2018 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.13)  10 JAN 2019 11:39
 entering extended mode
 **c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty
 (c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty
@@ -20,12 +20,61 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@tempdima=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+\c@caption@flags=\count89
+\c@ContinuedFloat=\count90
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count91
+\c@subtable=\count92
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen110
+\ar@mcellbox=\box26
+\extrarowheight=\dimen111
+\NC@list=\toks15
+\extratabsurround=\skip43
+\backup@length=\skip44
+\ar@cellbox=\box27
+)
+\TX@col@width=\dimen112
+\TX@old@table=\dimen113
+\TX@old@col=\dimen114
+\TX@target=\dimen115
+\TX@delta=\dimen116
+\TX@cols=\count93
+\TX@ftn=\toks16
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks14
-\pgfutil@tempdima=\dimen103
-\pgfutil@tempdimb=\dimen104
+\pgfutil@everybye=\toks17
+\pgfutil@tempdima=\dimen117
+\pgfutil@tempdimb=\dimen118
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.tex")) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
-\pgfutil@abb=\box26
+\pgfutil@abb=\box28
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
@@ -34,10 +83,7 @@ Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
-) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -48,33 +94,33 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen105
-\Gin@req@width=\dimen106
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks16
-\pgfkeys@temptoks=\toks17
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks18
+\pgfkeys@tmptoks=\toks20
 ))
-\pgf@x=\dimen107
-\pgf@y=\dimen108
-\pgf@xa=\dimen109
-\pgf@ya=\dimen110
-\pgf@xb=\dimen111
-\pgf@yb=\dimen112
-\pgf@xc=\dimen113
-\pgf@yc=\dimen114
+\pgf@x=\dimen121
+\pgf@y=\dimen122
+\pgf@xa=\dimen123
+\pgf@ya=\dimen124
+\pgf@xb=\dimen125
+\pgf@yb=\dimen126
+\pgf@xc=\dimen127
+\pgf@yc=\dimen128
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count89
-\c@pgf@countb=\count90
-\c@pgf@countc=\count91
-\c@pgf@countd=\count92
-\t@pgf@toka=\toks19
-\t@pgf@tokb=\toks20
-\t@pgf@tokc=\toks21
+\c@pgf@counta=\count94
+\c@pgf@countb=\count95
+\c@pgf@countc=\count96
+\c@pgf@countd=\count97
+\t@pgf@toka=\toks21
+\t@pgf@tokb=\toks22
+\t@pgf@tokc=\toks23
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -85,8 +131,8 @@ File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count93
-\pgfsyssoftpath@bigbuffer@items=\count94
+\pgfsyssoftpath@smallbuffer@items=\count98
+\pgfsyssoftpath@bigbuffer@items=\count99
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
@@ -107,52 +153,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen115
-\pgfmath@count=\count95
-\pgfmath@box=\box27
-\pgfmath@toks=\toks22
-\pgfmath@stack@operand=\toks23
-\pgfmath@stack@operation=\toks24
+\pgfmath@dimen=\dimen129
+\pgfmath@count=\count100
+\pgfmath@box=\box29
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count96
+\c@pgfmathroundto@lastzeros=\count101
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen116
-\pgf@picmaxx=\dimen117
-\pgf@picminy=\dimen118
-\pgf@picmaxy=\dimen119
-\pgf@pathminx=\dimen120
-\pgf@pathmaxx=\dimen121
-\pgf@pathminy=\dimen122
-\pgf@pathmaxy=\dimen123
-\pgf@xx=\dimen124
-\pgf@xy=\dimen125
-\pgf@yx=\dimen126
-\pgf@yy=\dimen127
-\pgf@zx=\dimen128
-\pgf@zy=\dimen129
+\pgf@picminx=\dimen130
+\pgf@picmaxx=\dimen131
+\pgf@picminy=\dimen132
+\pgf@picmaxy=\dimen133
+\pgf@pathminx=\dimen134
+\pgf@pathmaxx=\dimen135
+\pgf@pathminy=\dimen136
+\pgf@pathmaxy=\dimen137
+\pgf@xx=\dimen138
+\pgf@xy=\dimen139
+\pgf@yx=\dimen140
+\pgf@yy=\dimen141
+\pgf@zx=\dimen142
+\pgf@zy=\dimen143
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen130
-\pgf@path@lasty=\dimen131
+\pgf@path@lastx=\dimen144
+\pgf@path@lasty=\dimen145
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen132
-\pgf@shorten@start@additional=\dimen133
+\pgf@shorten@end@additional=\dimen146
+\pgf@shorten@start@additional=\dimen147
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box28
-\pgf@hbox=\box29
-\pgf@layerbox@main=\box30
-\pgf@picture@serial@count=\count97
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count102
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen134
+\pgflinewidth=\dimen148
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen135
-\pgf@pt@y=\dimen136
-\pgf@pt@temp=\dimen137
+\pgf@pt@x=\dimen149
+\pgf@pt@y=\dimen150
+\pgf@pt@temp=\dimen151
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex"
@@ -161,16 +207,16 @@ File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen138
+\pgfarrowsep=\dimen152
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen139
-\pgf@sys@shading@range@num=\count98
+\pgf@max=\dimen153
+\pgf@sys@shading@range@num=\count103
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box31
+\pgfexternal@startupbox=\box33
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex"
@@ -179,50 +225,50 @@ File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box32
+\pgfnodeparttextbox=\box34
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen140
-\pgf@nodesepend=\dimen141
+\pgf@nodesepstart=\dimen154
+\pgf@nodesepend=\dimen155
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex")) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen142
-\pgffor@skip=\dimen143
-\pgffor@stack=\toks25
-\pgffor@toks=\toks26
+\pgffor@iter=\dimen156
+\pgffor@skip=\dimen157
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count99
-\pgfplotmarksize=\dimen144
+\pgf@plot@mark@count=\count104
+\pgfplotmarksize=\dimen158
 )
-\tikz@lastx=\dimen145
-\tikz@lasty=\dimen146
-\tikz@lastxsaved=\dimen147
-\tikz@lastysaved=\dimen148
-\tikzleveldistance=\dimen149
-\tikzsiblingdistance=\dimen150
-\tikz@figbox=\box33
-\tikz@figbox@bg=\box34
-\tikz@tempbox=\box35
-\tikz@tempbox@bg=\box36
-\tikztreelevel=\count100
-\tikznumberofchildren=\count101
-\tikznumberofcurrentchild=\count102
-\tikz@fig@count=\count103
+\tikz@lastx=\dimen159
+\tikz@lasty=\dimen160
+\tikz@lastxsaved=\dimen161
+\tikz@lastysaved=\dimen162
+\tikzleveldistance=\dimen163
+\tikzsiblingdistance=\dimen164
+\tikz@figbox=\box35
+\tikz@figbox@bg=\box36
+\tikz@tempbox=\box37
+\tikz@tempbox@bg=\box38
+\tikztreelevel=\count105
+\tikznumberofchildren=\count106
+\tikznumberofcurrentchild=\count107
+\tikz@fig@count=\count108
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count104
-\pgfmatrixcurrentcolumn=\count105
-\pgf@matrix@numberofcolumns=\count106
+\pgfmatrixcurrentrow=\count109
+\pgfmatrixcurrentcolumn=\count110
+\pgf@matrix@numberofcolumns=\count111
 )
-\tikz@expandcount=\count107
+\tikz@expandcount=\count112
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarymatrix.code.tex"
@@ -232,21 +278,21 @@ File: tikzlibrarychains.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.6)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex" ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen151
-\pgfdecoratedremainingdistance=\dimen152
-\pgfdecoratedinputsegmentcompleteddistance=\dimen153
-\pgfdecoratedinputsegmentremainingdistance=\dimen154
-\pgf@decorate@distancetomove=\dimen155
-\pgf@decorate@repeatstate=\count108
-\pgfdecorationsegmentamplitude=\dimen156
-\pgfdecorationsegmentlength=\dimen157
+\pgfdecoratedcompleteddistance=\dimen165
+\pgfdecoratedremainingdistance=\dimen166
+\pgfdecoratedinputsegmentcompleteddistance=\dimen167
+\pgfdecoratedinputsegmentremainingdistance=\dimen168
+\pgf@decorate@distancetomove=\dimen169
+\pgf@decorate@repeatstate=\count113
+\pgfdecorationsegmentamplitude=\dimen170
+\pgfdecorationsegmentlength=\dimen171
 )
-\tikz@lib@dec@box=\box37
+\tikz@lib@dec@box=\box39
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex")) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex"
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.tex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen158
+\arrowsize=\dimen172
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
@@ -254,8 +300,8 @@ File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
@@ -266,70 +312,70 @@ Package ifvtex Info: VTeX not detected.
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count109
-\Gm@cntv=\count110
-\c@Gm@tempcnt=\count111
-\Gm@bindingoffset=\dimen159
-\Gm@wd@mp=\dimen160
-\Gm@odd@mp=\dimen161
-\Gm@even@mp=\dimen162
-\Gm@layoutwidth=\dimen163
-\Gm@layoutheight=\dimen164
-\Gm@layouthoffset=\dimen165
-\Gm@layoutvoffset=\dimen166
-\Gm@dimlist=\toks29
+\Gm@cnth=\count114
+\Gm@cntv=\count115
+\c@Gm@tempcnt=\count116
+\Gm@bindingoffset=\dimen173
+\Gm@wd@mp=\dimen174
+\Gm@odd@mp=\dimen175
+\Gm@even@mp=\dimen176
+\Gm@layoutwidth=\dimen177
+\Gm@layoutheight=\dimen178
+\Gm@layouthoffset=\dimen179
+\Gm@layoutvoffset=\dimen180
+\Gm@dimlist=\toks31
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks30
-\ex@=\dimen167
+\@emptytoks=\toks32
+\ex@=\dimen181
 )) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen168
+\pmbraise@=\dimen182
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count112
+\inf@bad=\count117
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count113
-\leftroot@=\count114
+\uproot@=\count118
+\leftroot@=\count119
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count115
-\DOTSCASE@=\count116
+\classnum@=\count120
+\DOTSCASE@=\count121
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box38
-\strutbox@=\box39
-\big@size=\dimen169
+\Mathstrutbox@=\box40
+\strutbox@=\box41
+\big@size=\dimen183
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count117
-\c@MaxMatrixCols=\count118
+\macc@depth=\count122
+\c@MaxMatrixCols=\count123
 \dotsspace@=\muskip10
-\c@parentequation=\count119
-\dspbrk@lvl=\count120
-\tag@help=\toks31
-\row@=\count121
-\column@=\count122
-\maxfields@=\count123
-\andhelp@=\toks32
-\eqnshift@=\dimen170
-\alignsep@=\dimen171
-\tagshift@=\dimen172
-\tagwidth@=\dimen173
-\totwidth@=\dimen174
-\lineht@=\dimen175
-\@envbody=\toks33
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks34
+\c@parentequation=\count124
+\dspbrk@lvl=\count125
+\tag@help=\toks33
+\row@=\count126
+\column@=\count127
+\maxfields@=\count128
+\andhelp@=\toks34
+\eqnshift@=\dimen184
+\alignsep@=\dimen185
+\tagshift@=\dimen186
+\tagwidth@=\dimen187
+\totwidth@=\dimen188
+\lineht@=\dimen189
+\@envbody=\toks35
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
@@ -342,121 +388,270 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks35
-\thm@bodyfont=\toks36
-\thm@headfont=\toks37
-\thm@notefont=\toks38
-\thm@headpunct=\toks39
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
-\dth@everypar=\toks40
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks42
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen176
-\captionmargin@=\dimen177
-\captionwidth=\dimen178
-\caption@tempdima=\dimen179
-\caption@indent=\dimen180
-\caption@parindent=\dimen181
-\caption@hangindent=\dimen182
-)
-\c@caption@flags=\count124
-\c@ContinuedFloat=\count125
-)
-\c@KVtest=\count126
-\sf@farskip=\skip49
-\sf@captopadj=\dimen183
-\sf@capskip=\skip50
-\sf@nearskip=\skip51
-\c@subfigure=\count127
-\c@subfigure@save=\count128
-\c@lofdepth=\count129
-\c@subtable=\count130
-\c@subtable@save=\count131
-\c@lotdepth=\count132
-\sf@top=\skip52
-\sf@bottom=\skip53
+\c@KVtest=\count129
+\sf@farskip=\skip51
+\sf@captopadj=\dimen190
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\sf@top=\skip54
+\sf@bottom=\skip55
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\fixmath.sty"
+Package: fixmath 2000/04/11 v0.9 (WaS)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 27.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 28.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 33.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \alpha on input line 38.
+LaTeX Font Info:    Redeclaring math symbol \beta on input line 39.
+LaTeX Font Info:    Redeclaring math symbol \gamma on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \delta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \epsilon on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \zeta on input line 43.
+LaTeX Font Info:    Redeclaring math symbol \eta on input line 44.
+LaTeX Font Info:    Redeclaring math symbol \theta on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \iota on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \kappa on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \lambda on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \mu on input line 49.
+LaTeX Font Info:    Redeclaring math symbol \nu on input line 50.
+LaTeX Font Info:    Redeclaring math symbol \xi on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \pi on input line 52.
+LaTeX Font Info:    Redeclaring math symbol \rho on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \sigma on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \tau on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \upsilon on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \phi on input line 57.
+LaTeX Font Info:    Redeclaring math symbol \chi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \psi on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \omega on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \varepsilon on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \vartheta on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \varpi on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \varphi on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \varrho on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \varsigma on input line 66.
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count133
-\lst@gtempboxa=\box40
-\lst@token=\toks41
-\lst@length=\count134
-\lst@currlwidth=\dimen184
-\lst@column=\count135
-\lst@pos=\count136
-\lst@lostspace=\dimen185
-\lst@width=\dimen186
-\lst@newlines=\count137
-\lst@lineno=\count138
-\lst@maxwidth=\dimen187
+\lst@mode=\count130
+\lst@gtempboxa=\box42
+\lst@token=\toks43
+\lst@length=\count131
+\lst@currlwidth=\dimen191
+\lst@column=\count132
+\lst@pos=\count133
+\lst@lostspace=\dimen192
+\lst@width=\dimen193
+\lst@newlines=\count134
+\lst@lineno=\count135
+\lst@maxwidth=\dimen194
  ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count139
-\lst@skipnumbers=\count140
-\lst@framebox=\box41
+\c@lstnumber=\count136
+\lst@skipnumbers=\count137
+\lst@framebox=\box43
 ) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2018/09/02 1.7 listings configuration
 ))
 Package: listings 2018/09/02 1.7 (Carsten Heinz)
- (Prosjektoppgave.aux)
-\openout1 = `Prosjektoppgave.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
- ABD: EveryShipout initializing macros ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count141
-\scratchdimen=\dimen188
-\scratchbox=\box42
-\nofMPsegments=\count142
-\nofMParguments=\count143
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count144
-\MPscratchDim=\dimen189
-\MPnumerator=\count145
-\makeMPintoPDFobject=\count146
-\everyMPtoPDFconversion=\toks43
-) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count138
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip56
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count139
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\relsize\relsize.sty"
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip57
+\skiplinenumber=\skip58
+\skiprule=\skip59
+\skiphlne=\skip60
+\skiptext=\skip61
+\skiplength=\skip62
+\algomargin=\skip63
+\skipalgocfslide=\skip64
+\algowidth=\dimen195
+\inoutsize=\dimen196
+\inoutindent=\dimen197
+\interspacetitleruled=\dimen198
+\interspacealgoruled=\dimen199
+\interspacetitleboxruled=\dimen256
+\algocf@ruledwidth=\skip65
+\algocf@inoutbox=\box44
+\algocf@inputbox=\box45
+\AlCapSkip=\skip66
+\AlCapHSkip=\skip67
+\algoskipindent=\skip68
+\algocf@nlbox=\box46
+\algocf@hangingbox=\box47
+\algocf@untilbox=\box48
+\algocf@skipuntil=\skip69
+\algocf@capbox=\box49
+\algocf@lcaptionbox=\skip70
+\algoheightruledefault=\skip71
+\algoheightrule=\skip72
+\algotitleheightruledefault=\skip73
+\algotitleheightrule=\skip74
+\c@algocfline=\count140
+\c@algocfproc=\count141
+\c@algocf=\count142
+\algocf@algoframe=\box50
+\algocf@algobox=\box51
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)))) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+) ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen257
+\Hy@linkcounter=\count143
+\Hy@pagecounter=\count144
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count145
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count146
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen258
+\Fld@menulength=\count147
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count148
+\c@Item=\count149
+\c@Hfootnote=\count150
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count151
+\c@bookmark@seq@number=\count152
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip75
+) (Prosjektoppgave.aux)
+\openout1 = `Prosjektoppgave.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:44: Package subcaption Error: This package can't be used in cooperation
+(subcaption)                with the subfig package.
+
+See the subcaption package documentation for explanation.
+Type  H <return>  for immediate help
+If you do not understand this error, please take a closer look
+at the documentation of the `subcaption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package caption Info: End \AtBeginDocument code.
+ABD: EveryShipout initializing macros ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii") ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
@@ -497,36 +692,67 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count147
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:44: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\c@lstlisting=\count153
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring OFF on input line 44.
+("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count154
+)
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
+\@outlinefile=\write4
+\openout4 = `Prosjektoppgave.out'.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:55: Misplaced \noalign
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:60: Misplaced \noalign
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:61: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [1
 
 {C:/Users/jju95/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
-] (Prosjektoppgave.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
- ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write4
-\openout4 = `Prosjektoppgave.toc'.
+]
+\tf@toc=\write5
+\openout5 = `Prosjektoppgave.toc'.
 
  [3
 
 ] [4
 
-] (Prosjektoppgave.toc)
-\tf@toc=\write5
-\openout5 = `Prosjektoppgave.toc'.
+]
 
- [1
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write6
+\openout6 = `Prosjektoppgave.toc'.
+
+[1
 
 ]
 Chapter 1.
@@ -534,54 +760,580 @@ Chapter 1.
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
 ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
- [3
-
-] [4] [5] [6]
-Chapter 3.
-[7
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+ ("C:\Users\jju95\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3
 
 ]
-Chapter 4.
-[8
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
-] [9]
+ []
+
+
+LaTeX Warning: Reference `sec:2.5' on page 4 undefined on input line 142.
+
+
+LaTeX Warning: Reference `eq2' on page 4 undefined on input line 144.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
+
+ []
+
+[4]
+
+LaTeX Warning: Reference `eq2' on page 5 undefined on input line 168.
+
+[5] [6] [7]
+Chapter 3.
+
+LaTeX Warning: Reference `eq1' on page 8 undefined on input line 203.
+
+
+LaTeX Warning: Citation `glasserman_04' on page 8 undefined on input line 203.
+
+
+LaTeX Warning: Reference `eq2' on page 8 undefined on input line 208.
+
+
+LaTeX Warning: Reference `eq3' on page 8 undefined on input line 213.
+
+
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+ [8
+
+]
+
+LaTeX Warning: Reference `eq:3.2' on page 9 undefined on input line 224.
+
+<MC_100_simulations.png, id=101, 462.528pt x 346.896pt>
+File: MC_100_simulations.png Graphic file (type png)
+<use MC_100_simulations.png>
+Package pdftex.def Info: MC_100_simulations.png  used on input line 227.
+(pdftex.def)             Requested size: 341.43306pt x 256.08499pt.
+
+LaTeX Warning: Reference `eq:3.1' on page 9 undefined on input line 232.
+
+
+LaTeX Warning: Reference `sec:4' on page 9 undefined on input line 242.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--244
+
+ []
+
+[9 <./MC_100_simulations.png>] [10]
+Chapter 4.
+[11
+
+]
+
+LaTeX Warning: Reference `BS_dV' on page 12 undefined on input line 269.
+
+
+LaTeX Warning: Reference `BS' on page 12 undefined on input line 300.
+
+[12]
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:326: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<call_option_BS.png, id=138, 462.528pt x 346.896pt>
+File: call_option_BS.png Graphic file (type png)
+<use call_option_BS.png>
+Package pdftex.def Info: call_option_BS.png  used on input line 326.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:328: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<put_option_BS.png, id=139, 462.528pt x 346.896pt>
+File: put_option_BS.png Graphic file (type png)
+<use put_option_BS.png>
+Package pdftex.def Info: put_option_BS.png  used on input line 328.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+LaTeX Warning: Reference `tab:BSvalues' on page 13 undefined on input line 332.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 333.
+
+[13] [14 <./call_option_BS.png> <./put_option_BS.png>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--259
+LaTeX Warning: Citation `McCulloch_43' on page 15 undefined on input line 349.
+
+
+LaTeX Warning: Citation `Rosenblatt_58' on page 15 undefined on input line 351.
+
+
+LaTeX Warning: Reference `perceptron' on page 15 undefined on input line 351.
+
+
+LaTeX Warning: Citation `Fukushima_80' on page 15 undefined on input line 351.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--259
+Underfull \hbox (badness 10000) in paragraph at lines 405--410
 
  []
 
 
-Underfull \vbox (badness 2922) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 405--410
 
- [10
+ []
 
-] [11]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+
+]
+
+LaTeX Warning: Reference `cost' on page 16 undefined on input line 457.
+
+
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [16] [17]
+<Activation_functions.png, id=185, 462.528pt x 346.896pt>
+File: Activation_functions.png Graphic file (type png)
+<use Activation_functions.png>
+Package pdftex.def Info: Activation_functions.png  used on input line 503.
+(pdftex.def)             Requested size: 341.43306pt x 256.08499pt.
+
+
+LaTeX Warning: Citation `Jarrett_09' on page 18 undefined on input line 508.
+
+[18 <./Activation_functions.png>]
+
+LaTeX Warning: Citation `rumelhart_86' on page 19 undefined on input line 527.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+
+ []
+
+
+LaTeX Warning: Reference `eq:6.4.1' on page 19 undefined on input line 532.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--535
+
+ []
+
+[19]
+
+LaTeX Warning: Reference `alg:forward' on page 20 undefined on input line 544.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--562
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 569--571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--571
+
+ []
+
+
+Overfull \hbox (11.53877pt too wide) in paragraph at lines 605--606
+\T1/cmr/m/n/10.95 The pa-ram-e-ters in the MLP are up-dated us-ing some ver-sion of gra-di-ent de-scent(Appendix?).
+ []
+
+[21]
+
+LaTeX Warning: Reference `Alg:SDG' on page 22 undefined on input line 608.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--636
+
+ []
+
+[22]
+
+LaTeX Warning: Reference `eq:5.2' on page 23 undefined on input line 644.
+
+
+LaTeX Warning: Reference `eq:5.3' on page 23 undefined on input line 644.
+
+
+LaTeX Warning: Reference `Alg:SDGm' on page 23 undefined on input line 644.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--661
+
+ []
+
+
+LaTeX Warning: Reference `Alg:Adam' on page 23 undefined on input line 664.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
+
+ []
+
+[23]
+
+LaTeX Warning: Citation `Cybenko_89' on page 24 undefined on input line 690.
+
+
+LaTeX Warning: Citation `Hornik_91' on page 24 undefined on input line 690.
+
+
+LaTeX Warning: Citation `Bengio_06' on page 24 undefined on input line 690.
+
+
+LaTeX Warning: Reference `Alg:kfold' on page 24 undefined on input line 692.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--710
+
+ []
+
+[24]
+
+LaTeX Warning: Citation `hutchinson_94' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Citation `hutchinson_94' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Reference `homogeneity' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Citation `Gencay_00' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Citation `hutchinson_94' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Citation `fogarasi_04' on page 25 undefined on input line 715.
+
+
+LaTeX Warning: Citation `amilon' on page 25 undefined on input line 715.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+
+LaTeX Warning: Reference `homogeneity' on page 26 undefined on input line 720.
+
+
+LaTeX Warning: Citation `vantage' on page 26 undefined on input line 721.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--722
+
+ []
+
+[26]
+
+LaTeX Warning: Citation `hutchinson_94' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `anders_96' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `gencay_03' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `yao_00' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `hutchinson_94' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `bennell_04' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `anders_96' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `Bengio_06' on page 27 undefined on input line 758.
+
+
+LaTeX Warning: Citation `keras' on page 27 undefined on input line 760.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 758--762
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 758--762
+
+ []
+
+[27] [28]
+Chapter 6.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:766: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Option `H' ignored and `p' used.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:811: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Option `H' ignored and `p' used.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:858: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<loss_mlp_32.png, id=286, 462.528pt x 346.896pt>
+File: loss_mlp_32.png Graphic file (type png)
+<use loss_mlp_32.png>
+Package pdftex.def Info: loss_mlp_32.png  used on input line 858.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:860: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<loss_mlp_128.png, id=287, 462.528pt x 346.896pt>
+File: loss_mlp_128.png Graphic file (type png)
+<use loss_mlp_128.png>
+Package pdftex.def Info: loss_mlp_128.png  used on input line 860.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:864: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Option `H' ignored and `p' used.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:899: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:903: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:907: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:918: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<truevspred_BS.png, id=288, 462.528pt x 346.896pt>
+File: truevspred_BS.png Graphic file (type png)
+<use truevspred_BS.png>
+Package pdftex.def Info: truevspred_BS.png  used on input line 918.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:920: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<truevspred_MC.png, id=289, 462.528pt x 346.896pt>
+File: truevspred_MC.png Graphic file (type png)
+<use truevspred_MC.png>
+Package pdftex.def Info: truevspred_MC.png  used on input line 920.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:926: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<truevspred_mlp_train.png, id=290, 462.528pt x 346.896pt>
+File: truevspred_mlp_train.png Graphic file (type png)
+<use truevspred_mlp_train.png>
+Package pdftex.def Info: truevspred_mlp_train.png  used on input line 926.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+c:/Users/jju95/OneDrive/Documents/PYTHON/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave/Prosjektoppgave.sty:928: LaTeX Error: No counter 'subfigure@save' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<truevspred_mlp_test.png, id=291, 462.528pt x 346.896pt>
+File: truevspred_mlp_test.png Graphic file (type png)
+<use truevspred_mlp_test.png>
+Package pdftex.def Info: truevspred_mlp_test.png  used on input line 928.
+(pdftex.def)             Requested size: 209.12683pt x 156.84808pt.
+
+LaTeX Warning: Reference `truevspres_BS' on page 29 undefined on input line 931.
+
+
+LaTeX Warning: Reference `truevspred_MC' on page 29 undefined on input line 931.
+
+
+LaTeX Warning: Reference `truevspred_test_mlp' on page 29 undefined on input line 931.
+
+
+LaTeX Warning: Reference `truevspres_train_mlp' on page 29 undefined on input line 931.
+
+
+LaTeX Warning: Citation `hutchinson_94' on page 29 undefined on input line 937.
+
+
+LaTeX Warning: Citation `anders_96' on page 29 undefined on input line 937.
+
+
+LaTeX Warning: Citation `amilon' on page 29 undefined on input line 941.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--945
+
+ []
+
+[29
+
+ <./loss_mlp_32.png> <./loss_mlp_128.png>] [30] [31] [32] [33 <./truevspred_BS.png> <./truevspred_MC.png> <./truevspred_mlp_train.png> <./truevspred_mlp_test.png>] [34]
+Chapter 7.
 No file Prosjektoppgave.bbl.
-[12] (Prosjektoppgave.aux) ) 
+[35
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 968.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 968.
+ (Prosjektoppgave.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 968.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 968.
+
+
+Package rerunfilecheck Warning: File `Prosjektoppgave.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Prosjektoppgave.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  23F92F43618173F2DC6292B379563C48;1615.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 968.
+ ) 
 Here is how much of TeX's memory you used:
- 17223 strings out of 492969
- 342687 string characters out of 3126585
- 375093 words of memory out of 3000000
- 20766 multiletter control sequences out of 15000+200000
- 28529 words of font info for 78 fonts, out of 3000000 for 9000
+ 21800 strings out of 492969
+ 413873 string characters out of 3126585
+ 482571 words of memory out of 3000000
+ 25103 multiletter control sequences out of 15000+200000
+ 38972 words of font info for 104 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,70p,963b,974s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Prosjektoppgave.pdf (16 pages, 250387 bytes).
+ 55i,17n,70p,2102b,983s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\jju95\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jju95/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Prosjektoppgave.pdf (39 pages, 760395 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 878 PDF objects out of 1000 (max. 8388607)
+ 164 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

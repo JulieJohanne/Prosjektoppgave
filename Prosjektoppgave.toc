@@ -1,14 +1,25 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {chapter}{\numberline {2}Financial theory}{3}
-\contentsline {section}{\numberline {2.1}Effiecient Market Hypopthesis}{3}
-\contentsline {section}{\numberline {2.2}Arbitrage}{3}
-\contentsline {subsection}{\numberline {2.2.1}Assets}{4}
-\contentsline {subsection}{\numberline {2.2.2}Derivatives}{5}
-\contentsline {chapter}{\numberline {3}Monte Carlo}{7}
-\contentsline {chapter}{\numberline {4}The Black-Scholes Model}{8}
-\contentsline {chapter}{\numberline {5}Artificial Neural Networks}{10}
-\contentsline {section}{\numberline {5.1}Deep Feedforward Networks}{10}
-\contentsline {subsection}{\numberline {5.1.1}Activation function}{12}
-\contentsline {section}{\numberline {5.2}Gradient-Based Training}{12}
-\contentsline {subsection}{\numberline {5.2.1}Backpropagation}{12}
-\contentsline {subsection}{\numberline {5.2.2}Stochastic Gradient Descent}{12}
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
+\contentsline {chapter}{\numberline {2}Financial theory}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Effiecient Market Hypopthesis}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Arbitrage}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Assets}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Derivatives}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}Risk-Neutral Pricing}{5}{section.2.5}
+\contentsline {section}{\numberline {2.6}Volatility}{6}{section.2.6}
+\contentsline {chapter}{\numberline {3}Monte Carlo Simulation}{8}{chapter.3}
+\contentsline {chapter}{\numberline {4}The Black-Scholes Model}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Assumptions}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Black-Scholes Partial Differential Equation}{11}{section.4.2}
+\contentsline {section}{\numberline {4.3}The Black Scholes Formula for European Options}{12}{section.4.3}
+\contentsline {chapter}{\numberline {5}Artificial Neural Networks}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptron}{16}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Activation function}{16}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Cost function}{19}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Backpropagation}{19}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Optimization}{21}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Generalization}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Model Setup}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Data Calibration}{26}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Network Architecture}{27}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Results and Analysis}{29}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{35}{chapter.7}

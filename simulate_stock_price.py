@@ -17,20 +17,20 @@ def parameter_estimation(data):
     m = np.mean(log_returns)
     volatility = np.std(log_returns)  # np.sqrt(1/(len(S)-2)*np.sum(np.power((S-m), 2)))
     mu = m - 0.5*volatility**2
-    return mu*250, volatility*np.sqrt(250)
+    return mu*252, volatility*np.sqrt(252)
 
 
 def simulate_random_walk(exp_return, volatility, current_price, time_to_expiry, no_time_steps, no_simulations):
     # Input: Annualised expected return, annualised volatility, current stock price, time to expiry in days,
     # number of time steps, number of simulations
     # Output: Simulated stock price
-    delta_t = time_to_expiry/(250*no_time_steps)
+    delta_t = time_to_expiry/(252*no_time_steps)
     stock_price = np.zeros((no_simulations, no_time_steps + 1))
     stock_price[:, 0] = current_price
     for i in range(no_simulations):
         for j in range(no_time_steps):
             Z = np.random.normal(loc=0, scale=1, size=1)
-            stock_price[i, j+1] = stock_price[i, j] * (1 + exp_return*delta_t + volatility * np.sqrt(delta_t) * Z)
+            stock_price[i, j+1] = stock_price[i, j] * (1 + exp_return * delta_t + volatility * np.sqrt(delta_t) * Z)
     return stock_price
 
 
@@ -38,19 +38,30 @@ def simulate_stock_price_historical(data, time_to_maturity, no_of_time_steps, no
     exp_return, volatility = parameter_estimation(data)
     time_to_maturity_annualised = time_to_maturity / 250  # 30 days maturity divided by 250  trading days
     N, M = no_of_time_steps, no_of_simulations
-    S0 = data[-1*time_to_maturity, 1]  # current price
-    return simulate_random_walk(exp_return, volatility, N, time_to_maturity_annualised, S0, M)
+    S0 = data[-1]  # current price
+    return simulate_random_walk(exp_return, volatility, S0, time_to_maturity_annualised, N, M)
 
 
 def simulate_BS(stock_price, exercise_price, time_to_expiry, risk_free_rate, current_time, volatility=None):
     S, K, T, r = stock_price, exercise_price, time_to_expiry / 250, risk_free_rate
     t = current_time
-    if volatility.any()==None:
-        S = stock_price[-1*time_to_maturity, 1] 
-        _, volatility = parameter_estimation(stock_price)
+    #if volatility.any()==None:
+    #    S = stock_price[-1*time_to_expiry]
+    #    _, volatility = parameter_estimation(stock_price)
     d1 = (np.log(S / K) + (r + 0.5 * np.power(volatility, 2) * (T - t))) / (volatility * np.sqrt(T - t))
     d2 = (np.log(S / K) + (r - 0.5 * np.power(volatility, 2)) * (T - t)) / (volatility * np.sqrt(T - t))
     return S * norm.cdf(d1) - K * np.exp(-1 * r * (T - t)) * norm.cdf(d2)
+
+
+def simulate_put_BS(stock_price, exercise_price, time_to_expiry, risk_free_rate, current_time, volatility=None):
+    S, K, T, r = stock_price, exercise_price, time_to_expiry / 250, risk_free_rate
+    t = current_time
+    #if volatility.any()==None:
+     #   S = stock_price[-1*time_to_expiry]
+     #   _, volatility = parameter_estimation(stock_price)
+    d1 = (np.log(S / K) + (r + 0.5 * np.power(volatility, 2) * (T - t))) / (volatility * np.sqrt(T - t))
+    d2 = (np.log(S / K) + (r - 0.5 * np.power(volatility, 2)) * (T - t)) / (volatility * np.sqrt(T - t))
+    return K * np.exp(-1 * r * (T - t)) * norm.cdf(-d2) - S * norm.cdf(-d1)
 
 
 def expected_option_price(stock_price, exercise_price, risk_free_rate, current_time):
@@ -61,5 +72,5 @@ def expected_option_price(stock_price, exercise_price, risk_free_rate, current_t
 
 def true_option_price(stock_price, exercise_price, risk_free_rate):
     time_to_expiry, stock_price_at_expiry = len(stock_price), stock_price[-1]
-    return np.exp(-risk_free_rate*time_to_expiry)*np.maximum(stock_price_at_expiry-exercise_price,  0)
+    return np.exp(-risk_free_rate*time_to_expiry)*np.maximum(stock_price_at_expiry - exercise_price,  0)
 
